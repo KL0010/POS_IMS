@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vboxuser\\Desktop\\test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97B443E4-CE83-46BB-BA58-E38523121098}|IMS\\IMS.csproj|c:\\users\\vboxuser\\desktop\\test\\ims\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97B443E4-CE83-46BB-BA58-E38523121098}|IMS\\IMS.csproj|solutionrelative:ims\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97B443E4-CE83-46BB-BA58-E38523121098}|IMS\\IMS.csproj|c:\\users\\vboxuser\\desktop\\test\\ims\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97B443E4-CE83-46BB-BA58-E38523121098}|IMS\\IMS.csproj|solutionrelative:ims\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\AppData\\Local\\Temp\\aoie2hvi..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\pos.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\pos.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\IMS\\Role.cs",
+              "RelativeDocumentMoniker": "IMS\\Role.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\IMS\\Role.cs",
+              "RelativeToolTip": "IMS\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T07:32:33.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\IMS\\Program.cs",
+              "RelativeDocumentMoniker": "IMS\\Program.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\IMS\\Program.cs",
+              "RelativeToolTip": "IMS\\Program.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAqwDQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:51:33.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\AppData\\Local\\Temp\\aoie2hvi..sql",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\aoie2hvi..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-16T05:54:10.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "POS\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Properties\\launchSettings.json",
+              "RelativeToolTip": "POS\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T05:49:44.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\appsettings.json",
+              "RelativeDocumentMoniker": "POS\\appsettings.json",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\appsettings.json",
+              "RelativeToolTip": "POS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-15T15:14:21.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "POS\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\appsettings.Development.json",
+              "RelativeToolTip": "POS\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-15T14:49:25.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\DataContext.cs",
+              "RelativeDocumentMoniker": "POS\\Models\\DataContext.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\DataContext.cs",
+              "RelativeToolTip": "POS\\Models\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T14:32:57.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "POS\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Role.cs",
+              "RelativeToolTip": "POS\\Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T14:22:16.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "POS\\Controllers\\DemoController.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "POS\\Controllers\\DemoController.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAApwBUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T14:11:49.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "POS",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\POS.csproj",
+              "RelativeDocumentMoniker": "POS\\POS.csproj",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\POS.csproj",
+              "RelativeToolTip": "POS\\POS.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-15T13:55:31.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "POS\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\WeatherForecast.cs",
+              "RelativeToolTip": "POS\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T13:50:40.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "POS\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "POS\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T13:50:04.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Program.cs",
+              "RelativeDocumentMoniker": "POS\\Program.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Program.cs",
+              "RelativeToolTip": "POS\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T13:45:07.983Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

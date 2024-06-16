@@ -1,0 +1,17 @@
+C:\Users\vboxuser\Desktop\test\IMS\bin\Debug\net8.0\IMS.exe
+C:\Users\vboxuser\Desktop\test\IMS\bin\Debug\net8.0\IMS.deps.json
+C:\Users\vboxuser\Desktop\test\IMS\bin\Debug\net8.0\IMS.runtimeconfig.json
+C:\Users\vboxuser\Desktop\test\IMS\bin\Debug\net8.0\IMS.dll
+C:\Users\vboxuser\Desktop\test\IMS\bin\Debug\net8.0\IMS.pdb
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.AssemblyInfoInputs.cache
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.AssemblyInfo.cs
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.csproj.CoreCompileInputs.cache
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.dll
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\refint\IMS.dll
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.pdb
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.genruntimeconfig.cache
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\ref\IMS.dll
+C:\Users\vboxuser\Desktop\test\IMS\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.csproj.AssemblyReference.cache
+C:\Users\vboxuser\Desktop\test\IMS\obj\Debug\net8.0\IMS.csproj.Up2Date
