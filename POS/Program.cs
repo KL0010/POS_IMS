@@ -12,9 +12,12 @@ builder.Services.AddEndpointsApiExplorer();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 
+builder.Services.AddCors();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://192.168.1.103:8080"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
