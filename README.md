@@ -8,8 +8,11 @@ The POS application uses Angular to render the UI.
 Environment:
 
 1 .NET 8 Core
+
 2 NodeJs
+
 3 Angular
+
 4 MS SQL 2023
 
 To-Do:
