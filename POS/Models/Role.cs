@@ -6,9 +6,11 @@ namespace POS.Models
     {
         [Key]
         public int RoleId { get; set; }
+
         [Required]
         [MaxLength(50)]
         public string RoleName { get; set; }
+
         [Required]
         [MaxLength(100)]
         public string Description { get; set; }
