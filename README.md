@@ -8,13 +8,13 @@ The POS application uses Angular to render the UI.
 Environment:
 
 1 .NET 8 Core
-
+<br />
 2 NodeJs
-
+<br />
 3 Angular
-
+<br />
 4 MS SQL 2023
-
+<br />
 To-Do:
 
 Due to Code First Approach, build Db by running command in Package Manager, Update-database InitialDbCreation.
