@@ -14,10 +14,10 @@ Environment:
 3 Angular
 <br />
 4 MS SQL 2023
-<br />
+<br /> <br />
 To-Do:
 
-Due to Code First Approach, build Db by running command in Package Manager, Update-database InitialDbCreation.
+Initial creation of database by running command in Package Manager: Update-database InitialDbCreation
 
 
 
