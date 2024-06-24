@@ -13,8 +13,11 @@ Environment:
 (3) Angular
 <br />
 (4) MS SQL 2023
-<br /> <br />
-To-Do:
+<br />
+Python
+<br />
+<br />
+<h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
 Note: InitialDbCreation does not completely build the entire relational blueprint. The POS relationships will be in PosDbCreation.cs.
