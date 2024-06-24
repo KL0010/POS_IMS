@@ -14,7 +14,7 @@ Environment:
 <br />
 (4) MS SQL 2023
 <br />
-Python
+(5) Python for AI/ML
 <br />
 <br />
 <h3>To-Do:</h3>
