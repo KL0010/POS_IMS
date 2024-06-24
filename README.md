@@ -29,7 +29,7 @@ dotnet run.
 <br /> 
 Then go into client root folder to run Angular. <br />
 Further information in found in README.md in client root folder.<br /><br />
-IMS.exe is located in bin folder.
+IMS.exe is located in bin folder in IMS root folder.
 
 
 
