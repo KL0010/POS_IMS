@@ -28,7 +28,9 @@ In root folder of POS, run in CMD:
 dotnet run.
 <br /> 
 Then go into client root folder to run Angular. <br />
-Further information in found in README.md in client root folder.
+Further information in found in README.md in client root folder.<br /><br />
+IMS.exe is located in bin folder.
+
 
 
 
