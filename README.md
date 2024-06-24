@@ -20,9 +20,11 @@ To-Do:
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation
 
 <br />
-t
 In root folder of POS, run in CMD:
-dotnet run
+dotnet run.
+<br /> 
+Then go into client root folder to run Angular. <br />
+Further information in found in README.md
 
 
 
