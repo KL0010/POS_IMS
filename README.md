@@ -17,7 +17,7 @@ Environment:
 To-Do:
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
-Note: InitialDbCreation does not completely build the entire relational blueprint. Complete relationships will be in PosDbCreation.cs.
+Note: InitialDbCreation does not completely build the entire relational blueprint. The POS relationships will be in PosDbCreation.cs.
 
 <br />
 In root folder of POS, run in CMD:
