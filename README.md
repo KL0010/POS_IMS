@@ -1,4 +1,4 @@
-Application Under construction.
+Application Under construction: Utilising Code First Approach
 
 Point Of Sale (POS) and Inventory Management System (IMS) is an .NET 8.0 Core webapi and console app.
 The POS application uses Angular to render the UI.
@@ -18,6 +18,11 @@ Environment:
 To-Do:
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation
+
+<br />
+t
+In root folder of POS, run in CMD:
+dotnet run
 
 
 
