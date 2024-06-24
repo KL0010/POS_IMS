@@ -19,7 +19,7 @@ namespace POS.Models
         public virtual DbSet<Session> Sessions { get; set; }
         public virtual DbSet<Logon> Logons { get; set; }
         public virtual DbSet<Conversation> Conversations { get; set; }
-        public virtual DbSet<Home> Home { get; set; }
+        public virtual DbSet<Home> Homes { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Blend> Blends { get; set; }
         public virtual DbSet<Ingredient> Ingredients { get; set; }

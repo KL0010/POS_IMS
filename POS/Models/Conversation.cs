@@ -20,6 +20,7 @@ namespace POS.Models
         public string UserName { get; set; }
 
         [ForeignKey(nameof(UserName))]
+
         public User User { get; set; }
     }
 }

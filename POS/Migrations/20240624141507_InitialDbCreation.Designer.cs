@@ -12,7 +12,7 @@ using POS.Models;
 namespace POS.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240623131909_InitialDbCreation")]
+    [Migration("20240624141507_InitialDbCreation")]
     partial class InitialDbCreation
     {
         /// <inheritdoc />
@@ -390,6 +390,9 @@ namespace POS.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
+                    b.Property<string>("Configuration")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(150)
@@ -399,7 +402,7 @@ namespace POS.Migrations
 
                     b.HasIndex("UserName");
 
-                    b.ToTable("Home");
+                    b.ToTable("Homes");
                 });
 
             modelBuilder.Entity("POS.Models.Ingredient", b =>

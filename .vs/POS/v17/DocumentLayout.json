@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\vboxuser\\Desktop\\test\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\logon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\logon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\reflectionasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\reflectionasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\initialcontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\initialcontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\Desktop\\test\\Client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
@@ -19,32 +51,8 @@
       "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\initialcontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\initialcontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\logon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\logon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\blendingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "BlendIngredient.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\BlendIngredient.cs",
               "RelativeDocumentMoniker": "POS\\Models\\BlendIngredient.cs",
@@ -80,6 +88,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ReflectionAsset.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ReflectionAsset.cs",
+              "RelativeDocumentMoniker": "POS\\Models\\ReflectionAsset.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ReflectionAsset.cs",
+              "RelativeToolTip": "POS\\Models\\ReflectionAsset.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T12:08:29.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Asset.cs",
+              "RelativeDocumentMoniker": "POS\\Models\\Asset.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Asset.cs",
+              "RelativeToolTip": "POS\\Models\\Asset.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T12:07:23.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "app.module.ts",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\Client\\src\\app\\app.module.ts",
               "RelativeDocumentMoniker": "Client\\src\\app\\app.module.ts",
@@ -87,12 +121,11 @@
               "RelativeToolTip": "Client\\src\\app\\app.module.ts",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-23T13:48:05.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T13:48:05.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "app.component.ts",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\Client\\src\\app\\app.component.ts",
               "RelativeDocumentMoniker": "Client\\src\\app\\app.component.ts",
@@ -105,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -113,12 +146,11 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-06-23T13:21:38.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T13:21:38.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ApiKey.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ApiKey.cs",
               "RelativeDocumentMoniker": "POS\\Models\\ApiKey.cs",
@@ -137,53 +169,53 @@
               "RelativeDocumentMoniker": "POS\\Models\\Validation.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Validation.cs",
               "RelativeToolTip": "POS\\Models\\Validation.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T13:07:07.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\User.cs",
               "RelativeDocumentMoniker": "POS\\Models\\User.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\User.cs",
               "RelativeToolTip": "POS\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T13:06:02.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Logon.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Logon.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Logon.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Logon.cs",
               "RelativeToolTip": "POS\\Models\\Logon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T13:05:32.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "InitialContact.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\InitialContact.cs",
               "RelativeDocumentMoniker": "POS\\Models\\InitialContact.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\InitialContact.cs",
               "RelativeToolTip": "POS\\Models\\InitialContact.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T13:05:13.199Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Customer.cs",
@@ -191,25 +223,24 @@
               "RelativeToolTip": "POS\\Models\\Customer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T11:42:36.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T11:42:36.888Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Contract.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Contract.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Contract.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Contract.cs",
               "RelativeToolTip": "POS\\Models\\Contract.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAwwBkAAAAuAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T11:42:12.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\DataContext.cs",
               "RelativeDocumentMoniker": "POS\\Models\\DataContext.cs",
@@ -217,12 +248,11 @@
               "RelativeToolTip": "POS\\Models\\DataContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T14:32:57.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T14:32:57.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Program.cs",
               "RelativeDocumentMoniker": "POS\\Program.cs",

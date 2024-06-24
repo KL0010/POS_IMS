@@ -387,6 +387,9 @@ namespace POS.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
+                    b.Property<string>("Configuration")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(150)
@@ -396,7 +399,7 @@ namespace POS.Migrations
 
                     b.HasIndex("UserName");
 
-                    b.ToTable("Home");
+                    b.ToTable("Homes");
                 });
 
             modelBuilder.Entity("POS.Models.Ingredient", b =>

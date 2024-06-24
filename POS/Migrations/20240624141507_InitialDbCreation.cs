@@ -507,17 +507,18 @@ namespace POS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Home",
+                name: "Homes",
                 columns: table => new
                 {
                     HomeId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false)
+                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Configuration = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Home", x => x.HomeId);
+                    table.PrimaryKey("PK_Homes", x => x.HomeId);
                     table.ForeignKey(
-                        name: "FK_Home_Users_UserName",
+                        name: "FK_Homes_Users_UserName",
                         column: x => x.UserName,
                         principalTable: "Users",
                         principalColumn: "UserName",
@@ -733,8 +734,8 @@ namespace POS.Migrations
                 column: "LocationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Home_UserName",
-                table: "Home",
+                name: "IX_Homes_UserName",
+                table: "Homes",
                 column: "UserName");
 
             migrationBuilder.CreateIndex(
@@ -833,7 +834,7 @@ namespace POS.Migrations
                 name: "GetIngredientLocations");
 
             migrationBuilder.DropTable(
-                name: "Home");
+                name: "Homes");
 
             migrationBuilder.DropTable(
                 name: "IngredientOrigins");

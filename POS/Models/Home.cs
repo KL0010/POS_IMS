@@ -15,5 +15,7 @@ namespace POS.Models
 
         [ForeignKey(nameof(UserName))]
         public User User { get; set; }
+
+        public string Configuration {  get; set; }
     }
 }
