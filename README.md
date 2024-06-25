@@ -30,7 +30,7 @@ dotnet run.
 Then go into client root folder to run Angular. <br />
 Further information in found in README.md in client root folder.<br /><br />
 IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
-Authentication and Authorisation component will be integrated after 30/6/2024.
+Authentication and Authorisation component will be integrated after 27/6/2024.
 
 
 
