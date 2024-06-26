@@ -1,7 +1,7 @@
 <h3><b>Application Under construction: Utilising Code First Approach</b></h3>
 <b>Point Of Sale (POS) and Inventory Management System (IMS)</b> is an .NET 8.0 Core webapi and console app is designed for <b>producers of blended products</b>.
 <h4>System is designed to keep track of Blends and Ingredients.</h4>
-<b>AI/ML</b> will be utilized for regression analysis in the field of economics, analysing supply and demand in the context of movement in equilibrium price.
+<b>AI/ML</b> will be utilized for regression analysis in the field of economics, analysing supply and demand in the context of movement in equilibrium price.<br />
 Documentation and class relational blueprint will be available after basic functionalities are rolled out.</br />
 The POS application uses Angular to render the UI.<br /><br />
 <h3>Environment:</h3>
