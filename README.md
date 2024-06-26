@@ -23,6 +23,8 @@ Initial creation of database by running command in Package Manager: Update-datab
 <b>Note:</b> InitialDbCreation does not completely build the entire relational blueprint. <br />
 The POS relationships will be in PosDbCreation.cs. This file will be available after 26/6/2024.
 
+Documentation and class diagram will be available after basic functionalities are rolled out.
+
 <br />
 In root folder of POS, run in CMD:
 dotnet run.
