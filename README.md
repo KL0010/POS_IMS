@@ -1,9 +1,8 @@
 <h3><b>Application Under construction: Utilising Code First Approach</b></h3>
-<b>Point Of Sale (POS) and Inventory Management System (IMS)</b> is an .NET 8.0 Core webapi and console app for producers of products of blends.
-The POS application uses Angular to render the UI.
-
-
-
+<b>Point Of Sale (POS) and Inventory Management System (IMS)</b> is an .NET 8.0 Core webapi and console app for producers of blended products.
+<h4>System is designed to keep track of Blends and Ingredients.</h4><br />
+Documentation and class relational blueprint will be available after basic functionalities are rolled out.</br />
+The POS application uses Angular to render the UI.<br /><br />
 <h3>Environment:</h3>
 
 (1) .NET 8 Core
@@ -23,7 +22,7 @@ Initial creation of database by running command in Package Manager: Update-datab
 <b>Note:</b> InitialDbCreation does not completely build the entire relational blueprint. <br />
 The POS relationships will be in PosDbCreation.cs. This file will be available after 26/6/2024.
 
-Documentation and class diagram will be available after basic functionalities are rolled out.
+
 
 <br />
 In root folder of POS, run in CMD:
