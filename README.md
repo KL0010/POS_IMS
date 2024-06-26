@@ -21,7 +21,7 @@ The POS application uses Angular to render the UI.<br /><br />
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
 <b>Note:</b> InitialDbCreation does not completely build the entire relational blueprint. <br />
-The POS relationships will be in PosDbCreation.cs. This file will be available after 26/6/2024.
+The POS relationships will be in PosDbCreation.cs. This file will be available after 30/6/2024.
 
 
 
@@ -32,7 +32,7 @@ dotnet run.
 Then go into client root folder to run Angular. <br />
 Further information in found in README.md in client root folder.<br /><br />
 IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
-Authentication and Authorisation component and DatabaseSeeder.cs  will be available after 30/6/2024.
+Authentication and Authorisation component and DatabaseSeeder.cs  will be available after 7/7/2024.
 
 
 
