@@ -20,8 +20,6 @@ The POS application uses Angular to render the UI.<br /><br />
 <h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
-<b>Note:</b> InitialDbCreation does not completely build the entire relational blueprint. <br />
-The POS relationships will be in PosDbCreation.cs. This file will be available after 30/6/2024.
 
 
 
