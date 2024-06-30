@@ -6,14 +6,14 @@ namespace POS.Models
     public class ApiKey
     {
         [Key]
-        [MaxLength(150)]
-        public string Email { get; set; }
+        [MaxLength(128)]
+        public string Username { get; set; }
 
         [Required]
         [MaxLength(128)]
         public string Apikey { get; set; }
 
-        [ForeignKey(nameof(Email))]
+        [ForeignKey(nameof(Username))]
         public User User { get; set; }
     }
 }

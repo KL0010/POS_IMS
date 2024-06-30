@@ -12,7 +12,7 @@ using POS.Models;
 namespace POS.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240624141507_InitialDbCreation")]
+    [Migration("20240630142245_InitialDbCreation")]
     partial class InitialDbCreation
     {
         /// <inheritdoc />
@@ -55,18 +55,44 @@ namespace POS.Migrations
 
             modelBuilder.Entity("POS.Models.ApiKey", b =>
                 {
-                    b.Property<string>("Email")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                    b.Property<string>("Username")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Apikey")
                         .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
-                    b.HasKey("Email");
+                    b.HasKey("Username");
 
                     b.ToTable("Apikeys");
+                });
+
+            modelBuilder.Entity("POS.Models.Assesmbly", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Assemble")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("BlendName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Assesmblies");
                 });
 
             modelBuilder.Entity("POS.Models.Asset", b =>
@@ -151,6 +177,84 @@ namespace POS.Migrations
                     b.ToTable("BlendsIngredients");
                 });
 
+            modelBuilder.Entity("POS.Models.Brand", b =>
+                {
+                    b.Property<int>("BrandId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BrandId"));
+
+                    b.Property<string>("BrandName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ContractId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FormatType")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("LogoUrl")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("BrandId");
+
+                    b.HasIndex("ContractId");
+
+                    b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("POS.Models.BrandAsset", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AssetName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("AssetUrl")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FormatType")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.ToTable("BrandAssets");
+                });
+
             modelBuilder.Entity("POS.Models.BusinessIdentifier", b =>
                 {
                     b.Property<string>("Acronym")
@@ -198,8 +302,8 @@ namespace POS.Migrations
 
                     b.Property<string>("Approver")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("BusinessIdNumber")
                         .IsRequired()
@@ -230,6 +334,34 @@ namespace POS.Migrations
                     b.ToTable("Contracts");
                 });
 
+            modelBuilder.Entity("POS.Models.ContractService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ContractId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContractId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("ContractServices");
+                });
+
             modelBuilder.Entity("POS.Models.Conversation", b =>
                 {
                     b.Property<int>("ConversationId")
@@ -243,17 +375,22 @@ namespace POS.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<string>("ContactId")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.HasKey("ConversationId");
 
-                    b.HasIndex("UserName");
+                    b.HasIndex("ContactId");
 
                     b.ToTable("Conversations");
                 });
@@ -395,8 +532,8 @@ namespace POS.Migrations
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.HasKey("HomeId");
 
@@ -413,6 +550,12 @@ namespace POS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IngredientId"));
 
+                    b.Property<byte>("Barcode")
+                        .HasColumnType("tinyint");
+
+                    b.Property<int?>("BlendId")
+                        .HasColumnType("int");
+
                     b.Property<string>("IngredientDescription")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -423,7 +566,27 @@ namespace POS.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
+                    b.Property<string>("Sku")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<decimal>("TotalQuantity")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
                     b.HasKey("IngredientId");
+
+                    b.HasIndex("BlendId");
 
                     b.ToTable("Ingredients");
                 });
@@ -464,6 +627,9 @@ namespace POS.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("IngredientId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InvoiceId")
                         .HasColumnType("int");
 
                     b.Property<int>("OriginId")
@@ -555,6 +721,29 @@ namespace POS.Migrations
                     b.ToTable("IntialContacts");
                 });
 
+            modelBuilder.Entity("POS.Models.Invoice", b =>
+                {
+                    b.Property<string>("InvoiceId")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<decimal>("Cost")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.HasKey("InvoiceId");
+
+                    b.ToTable("Invoices");
+                });
+
             modelBuilder.Entity("POS.Models.Location", b =>
                 {
                     b.Property<int>("LocationId")
@@ -606,6 +795,130 @@ namespace POS.Migrations
                     b.HasIndex("TokenId");
 
                     b.ToTable("Logons");
+                });
+
+            modelBuilder.Entity("POS.Models.NDA", b =>
+                {
+                    b.Property<string>("NdaId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Agreement")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("ContractId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<DateTime>("Creationdate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("NdaId");
+
+                    b.HasIndex("ContractId");
+
+                    b.ToTable("NDAs");
+                });
+
+            modelBuilder.Entity("POS.Models.Order", b =>
+                {
+                    b.Property<string>("OrderId")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("Ingredients")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("POS.Models.OrderIngredient", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Discount")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<decimal>("DiscountPrice")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<int>("IngredientId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Invoiced")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("LineTotal")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<decimal>("Margin")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<bool>("Shipped")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("TaxRate")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IngredientId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderIngredient");
                 });
 
             modelBuilder.Entity("POS.Models.Origin", b =>
@@ -667,11 +980,54 @@ namespace POS.Migrations
                         .HasPrecision(28, 6)
                         .HasColumnType("decimal(28,6)");
 
+                    b.Property<decimal>("TotalQuantity")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<decimal>("Weight")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
                     b.HasKey("QuantityId");
 
                     b.HasIndex("BlendId");
 
                     b.ToTable("Quantities");
+                });
+
+            modelBuilder.Entity("POS.Models.QuantityLocation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LocationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuantityId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LocationId");
+
+                    b.HasIndex("QuantityId");
+
+                    b.ToTable("QuantityLocations");
                 });
 
             modelBuilder.Entity("POS.Models.Reflection", b =>
@@ -748,6 +1104,124 @@ namespace POS.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("POS.Models.Sale", b =>
+                {
+                    b.Property<string>("SaleId")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("Blends")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<decimal>("TotalCost")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.HasKey("SaleId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("Sales");
+                });
+
+            modelBuilder.Entity("POS.Models.SaleBlend", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BlendId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Discount")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<decimal>("DiscountPrice")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<decimal>("LineTotal")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<decimal>("Margin")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("Note")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("SaleId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<decimal>("TaxRate")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlendId");
+
+                    b.HasIndex("SaleId");
+
+                    b.ToTable("SaleBlends");
+                });
+
+            modelBuilder.Entity("POS.Models.Service", b =>
+                {
+                    b.Property<int>("ServiceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServiceId"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ServiceDescription")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("ServiceId");
+
+                    b.ToTable("Services");
+                });
+
             modelBuilder.Entity("POS.Models.Session", b =>
                 {
                     b.Property<string>("TokenId")
@@ -761,8 +1235,8 @@ namespace POS.Migrations
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.HasKey("TokenId");
 
@@ -840,9 +1314,53 @@ namespace POS.Migrations
                     b.ToTable("SupplierAddresses");
                 });
 
+            modelBuilder.Entity("POS.Models.SupplierIngredient", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Cost")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IngredientId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("InvoiceId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
+
+                    b.Property<string>("SupplierId")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IngredientId");
+
+                    b.ToTable("SupplierIngredients");
+                });
+
             modelBuilder.Entity("POS.Models.User", b =>
                 {
                     b.Property<string>("UserName")
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
@@ -860,6 +1378,8 @@ namespace POS.Migrations
                         .HasColumnType("nvarchar(128)");
 
                     b.HasKey("UserName");
+
+                    b.HasIndex("Email");
 
                     b.ToTable("Users");
                 });
@@ -905,7 +1425,7 @@ namespace POS.Migrations
                 {
                     b.HasOne("POS.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("Email")
+                        .HasForeignKey("Username")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -915,7 +1435,7 @@ namespace POS.Migrations
             modelBuilder.Entity("POS.Models.Blend", b =>
                 {
                     b.HasOne("POS.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("Blends")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -942,6 +1462,28 @@ namespace POS.Migrations
                     b.Navigation("Ingredient");
                 });
 
+            modelBuilder.Entity("POS.Models.Brand", b =>
+                {
+                    b.HasOne("POS.Models.Contract", "Contract")
+                        .WithMany()
+                        .HasForeignKey("ContractId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contract");
+                });
+
+            modelBuilder.Entity("POS.Models.BrandAsset", b =>
+                {
+                    b.HasOne("POS.Models.Brand", "Brand")
+                        .WithMany()
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+                });
+
             modelBuilder.Entity("POS.Models.Contract", b =>
                 {
                     b.HasOne("POS.Models.User", "User")
@@ -961,15 +1503,34 @@ namespace POS.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("POS.Models.Conversation", b =>
+            modelBuilder.Entity("POS.Models.ContractService", b =>
                 {
-                    b.HasOne("POS.Models.User", "User")
+                    b.HasOne("POS.Models.Contract", "Contract")
                         .WithMany()
-                        .HasForeignKey("UserName")
+                        .HasForeignKey("ContractId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.HasOne("POS.Models.Service", "Service")
+                        .WithMany()
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contract");
+
+                    b.Navigation("Service");
+                });
+
+            modelBuilder.Entity("POS.Models.Conversation", b =>
+                {
+                    b.HasOne("POS.Models.InitialContact", "InitialContact")
+                        .WithMany()
+                        .HasForeignKey("ContactId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("InitialContact");
                 });
 
             modelBuilder.Entity("POS.Models.Customer", b =>
@@ -1011,6 +1572,13 @@ namespace POS.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("POS.Models.Ingredient", b =>
+                {
+                    b.HasOne("POS.Models.Blend", null)
+                        .WithMany("Ingredients")
+                        .HasForeignKey("BlendId");
                 });
 
             modelBuilder.Entity("POS.Models.IngredientLocation", b =>
@@ -1070,6 +1638,47 @@ namespace POS.Migrations
                     b.Navigation("Session");
                 });
 
+            modelBuilder.Entity("POS.Models.NDA", b =>
+                {
+                    b.HasOne("POS.Models.Contract", "Contract")
+                        .WithMany()
+                        .HasForeignKey("ContractId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contract");
+                });
+
+            modelBuilder.Entity("POS.Models.Order", b =>
+                {
+                    b.HasOne("POS.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("POS.Models.OrderIngredient", b =>
+                {
+                    b.HasOne("POS.Models.Ingredient", "Ingredient")
+                        .WithMany()
+                        .HasForeignKey("IngredientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POS.Models.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ingredient");
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("POS.Models.Postcode", b =>
                 {
                     b.HasOne("POS.Models.State", "State")
@@ -1090,6 +1699,25 @@ namespace POS.Migrations
                         .IsRequired();
 
                     b.Navigation("Blend");
+                });
+
+            modelBuilder.Entity("POS.Models.QuantityLocation", b =>
+                {
+                    b.HasOne("POS.Models.Location", "Location")
+                        .WithMany()
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POS.Models.Quantity", "Quantity")
+                        .WithMany()
+                        .HasForeignKey("QuantityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Location");
+
+                    b.Navigation("Quantity");
                 });
 
             modelBuilder.Entity("POS.Models.Reflection", b =>
@@ -1120,6 +1748,36 @@ namespace POS.Migrations
                     b.Navigation("Asset");
 
                     b.Navigation("Reflection");
+                });
+
+            modelBuilder.Entity("POS.Models.Sale", b =>
+                {
+                    b.HasOne("POS.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("POS.Models.SaleBlend", b =>
+                {
+                    b.HasOne("POS.Models.Blend", "Blend")
+                        .WithMany()
+                        .HasForeignKey("BlendId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POS.Models.Sale", "Sale")
+                        .WithMany()
+                        .HasForeignKey("SaleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Blend");
+
+                    b.Navigation("Sale");
                 });
 
             modelBuilder.Entity("POS.Models.Session", b =>
@@ -1174,11 +1832,22 @@ namespace POS.Migrations
                     b.Navigation("Supplier");
                 });
 
+            modelBuilder.Entity("POS.Models.SupplierIngredient", b =>
+                {
+                    b.HasOne("POS.Models.Ingredient", "Ingredient")
+                        .WithMany()
+                        .HasForeignKey("IngredientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ingredient");
+                });
+
             modelBuilder.Entity("POS.Models.User", b =>
                 {
                     b.HasOne("POS.Models.InitialContact", "InitialContact")
                         .WithMany()
-                        .HasForeignKey("UserName")
+                        .HasForeignKey("Email")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1194,6 +1863,16 @@ namespace POS.Migrations
                         .IsRequired();
 
                     b.Navigation("InitialContacts");
+                });
+
+            modelBuilder.Entity("POS.Models.Blend", b =>
+                {
+                    b.Navigation("Ingredients");
+                });
+
+            modelBuilder.Entity("POS.Models.Category", b =>
+                {
+                    b.Navigation("Blends");
                 });
 #pragma warning restore 612, 618
         }

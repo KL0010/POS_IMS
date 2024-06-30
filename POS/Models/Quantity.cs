@@ -20,7 +20,23 @@ namespace POS.Models
         public int BlendId { get; set; }
 
         [ForeignKey(nameof(BlendId))]
-
         public Blend Blend { get; set; }
+
+        [Required]
+        [Precision(28, 6)]
+        public decimal Weight { get; set; }
+
+        [Required]
+        [Precision(28, 6)]
+        public decimal UnitPrice { get; set; }
+
+        [Required]
+        [MaxLength(5)]
+        public string Unit {  get; set; }
+
+        [Required]
+        [Precision(28, 6)]
+        public decimal TotalQuantity { get; set;}
+
     }
 }

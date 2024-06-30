@@ -25,5 +25,7 @@ namespace POS.Models
         [ForeignKey(nameof(CategoryId))]
 
         public Category Category { get; set; }
+
+        public IEnumerable <Ingredient> Ingredients { get; set;}
     }
 }

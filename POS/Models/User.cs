@@ -7,8 +7,12 @@ namespace POS.Models
     public class User
     {
         [Key]
-        [MaxLength(150)]
+        [MaxLength(128)]
         public string UserName { get; set; }
+
+        [Required]
+        [MaxLength(150)]
+        public string Email  { get; set; }
 
         [Required]
         [MaxLength(128)]
@@ -21,7 +25,7 @@ namespace POS.Models
         [Required]
         public int RoleId { get; set; }
 
-        [ForeignKey(nameof(UserName))]
+        [ForeignKey(nameof(Email))]
         public InitialContact InitialContact { get; set; }
     }
 }

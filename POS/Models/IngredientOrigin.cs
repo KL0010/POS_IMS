@@ -10,7 +10,6 @@ namespace POS.Models
 
         [Required]
         public int IngredientId { get; set; }
-
         [ForeignKey(nameof(IngredientId))]
 
         public Ingredient Ingredient { get; set; }
@@ -19,7 +18,11 @@ namespace POS.Models
         public int OriginId { get; set; }
 
         [ForeignKey(nameof(OriginId))]
-
         public Origin Origin { get; set; }
+
+        [Required]
+        public int InvoiceId { get; set; }
+
+
     }
 }

@@ -26,7 +26,6 @@ namespace POS.Models
         public short Input4 { get; set; }
 
         [ForeignKey(nameof(Email))]
-
         public InitialContact InitialContacts { get; set; }
     }
 }

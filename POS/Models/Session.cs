@@ -9,7 +9,7 @@ namespace POS.Models
         public string TokenId { get; set; }
 
         [Required]
-        [MaxLength(150)]
+        [MaxLength(128)]
         public string UserName { get; set; }
 
         [Required]

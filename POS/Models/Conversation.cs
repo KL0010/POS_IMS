@@ -9,6 +9,10 @@ namespace POS.Models
         public int ConversationId { get; set; }
 
         [Required]
+        [MaxLength(128)]
+        public string UserName { get; set; }
+
+        [Required]
         [MaxLength(1000)]
         public string Comment { get; set; }
 
@@ -17,10 +21,9 @@ namespace POS.Models
 
         [Required]
         [MaxLength(150)]
-        public string UserName { get; set; }
+        public string ContactId { get; set; }
 
-        [ForeignKey(nameof(UserName))]
-
-        public User User { get; set; }
+        [ForeignKey(nameof(ContactId))]
+        public InitialContact InitialContact { get; set; }
     }
 }

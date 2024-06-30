@@ -30,7 +30,7 @@ namespace POS.Models
         public Customer Customer { get; set; }
 
         [Required]
-        [MaxLength(150)]
+        [MaxLength(128)]
         public string Approver { get; set; }
 
         [ForeignKey(nameof(Approver))]

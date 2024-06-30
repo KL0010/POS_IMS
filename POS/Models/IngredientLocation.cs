@@ -10,10 +10,6 @@ namespace POS.Models
         public int Id { get; set; }
 
         [Required]
-        [Precision(28, 6)]
-        public decimal QuantityAmount { get; set; }
-
-        [Required]
         public int  IngredientId { get; set; }
 
         [ForeignKey(nameof(IngredientId))]
@@ -26,5 +22,9 @@ namespace POS.Models
         [ForeignKey(nameof(LocationId))]
 
         public Location Location { get; set; }
+
+        [Required]
+        [Precision(28, 6)]
+        public decimal QuantityAmount { get; set; }
     }
 }

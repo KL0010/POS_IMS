@@ -42,6 +42,20 @@ namespace POS.Models
         public virtual DbSet<CustomerAddress> CustomerAddresses { get; set; }
         public virtual DbSet<SupplierAddress> SupplierAddresses { get; set; }
         public virtual DbSet<Contract> Contracts { get; set; }
+        public virtual DbSet<NDA> NDAs { get; set; }
+        public virtual DbSet<QuantityLocation> QuantityLocations { get; set; }
+        public virtual DbSet<Sale> Sales { get; set; }
+        public virtual DbSet<SaleBlend> SaleBlends { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderIngredient> OrderIngredients { get; set; }
+        public virtual DbSet<OrderIngredient> OrderSuppliers { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<SupplierIngredient> SupplierIngredients { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<BrandAsset> BrandAssets { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<ContractService> ContractServices { get; set; }
+        public virtual DbSet<Assesmbly> Assesmblies { get; set; }
 
 
 

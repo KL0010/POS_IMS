@@ -12,6 +12,21 @@ namespace POS.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Assesmblies",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BlendName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Assemble = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Assesmblies", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Assets",
                 columns: table => new
                 {
@@ -93,20 +108,6 @@ namespace POS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Ingredients",
-                columns: table => new
-                {
-                    IngredientId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IngredientName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    IngredientDescription = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Ingredients", x => x.IngredientId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "IntialContacts",
                 columns: table => new
                 {
@@ -129,6 +130,20 @@ namespace POS.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IntialContacts", x => x.Email);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Invoices",
+                columns: table => new
+                {
+                    InvoiceId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    OrderId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Cost = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Invoices", x => x.InvoiceId);
                 });
 
             migrationBuilder.CreateTable(
@@ -169,6 +184,21 @@ namespace POS.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Roles", x => x.RoleId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Services",
+                columns: table => new
+                {
+                    ServiceId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    ServiceDescription = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Services", x => x.ServiceId);
                 });
 
             migrationBuilder.CreateTable(
@@ -257,10 +287,33 @@ namespace POS.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Conversations",
+                columns: table => new
+                {
+                    ConversationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
+                    PostDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ContactId = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Conversations", x => x.ConversationId);
+                    table.ForeignKey(
+                        name: "FK_Conversations_IntialContacts_ContactId",
+                        column: x => x.ContactId,
+                        principalTable: "IntialContacts",
+                        principalColumn: "Email",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
-                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Salt = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false)
@@ -269,8 +322,8 @@ namespace POS.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.UserName);
                     table.ForeignKey(
-                        name: "FK_Users_IntialContacts_UserName",
-                        column: x => x.UserName,
+                        name: "FK_Users_IntialContacts_Email",
+                        column: x => x.Email,
                         principalTable: "IntialContacts",
                         principalColumn: "Email",
                         onDelete: ReferentialAction.Cascade);
@@ -299,82 +352,28 @@ namespace POS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GetIngredientLocations",
+                name: "Ingredients",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    QuantityAmount = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
-                    IngredientId = table.Column<int>(type: "int", nullable: false),
-                    LocationId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GetIngredientLocations", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_GetIngredientLocations_Ingredients_IngredientId",
-                        column: x => x.IngredientId,
-                        principalTable: "Ingredients",
-                        principalColumn: "IngredientId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_GetIngredientLocations_Locations_LocationId",
-                        column: x => x.LocationId,
-                        principalTable: "Locations",
-                        principalColumn: "LocationId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "IngredientOrigins",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IngredientId = table.Column<int>(type: "int", nullable: false),
-                    OriginId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IngredientOrigins", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_IngredientOrigins_Ingredients_IngredientId",
-                        column: x => x.IngredientId,
-                        principalTable: "Ingredients",
-                        principalColumn: "IngredientId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_IngredientOrigins_Origins_OriginId",
-                        column: x => x.OriginId,
-                        principalTable: "Origins",
-                        principalColumn: "OriginId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "BlendsIngredients",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    BlendId = table.Column<int>(type: "int", nullable: false),
                     IngredientId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IngredientName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    IngredientDescription = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    UnitPrice = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
+                    TotalQuantity = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Sku = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Barcode = table.Column<byte>(type: "tinyint", nullable: false),
+                    BlendId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BlendsIngredients", x => x.Id);
+                    table.PrimaryKey("PK_Ingredients", x => x.IngredientId);
                     table.ForeignKey(
-                        name: "FK_BlendsIngredients_Blends_BlendId",
+                        name: "FK_Ingredients_Blends_BlendId",
                         column: x => x.BlendId,
                         principalTable: "Blends",
-                        principalColumn: "BlendId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BlendsIngredients_Ingredients_IngredientId",
-                        column: x => x.IngredientId,
-                        principalTable: "Ingredients",
-                        principalColumn: "IngredientId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "BlendId");
                 });
 
             migrationBuilder.CreateTable(
@@ -385,7 +384,11 @@ namespace POS.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Price = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    BlendId = table.Column<int>(type: "int", nullable: false)
+                    BlendId = table.Column<int>(type: "int", nullable: false),
+                    Weight = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    UnitPrice = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
+                    TotalQuantity = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -440,18 +443,63 @@ namespace POS.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Orders",
+                columns: table => new
+                {
+                    OrderId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    CustomerId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Ingredients = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
+                    TotalAmount = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.OrderId);
+                    table.ForeignKey(
+                        name: "FK_Orders_Customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "CustomerId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sales",
+                columns: table => new
+                {
+                    SaleId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Blends = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
+                    TotalCost = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    CustomerId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sales", x => x.SaleId);
+                    table.ForeignKey(
+                        name: "FK_Sales_Customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "CustomerId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Apikeys",
                 columns: table => new
                 {
-                    Email = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Apikey = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Apikeys", x => x.Email);
+                    table.PrimaryKey("PK_Apikeys", x => x.Username);
                     table.ForeignKey(
-                        name: "FK_Apikeys_Users_Email",
-                        column: x => x.Email,
+                        name: "FK_Apikeys_Users_Username",
+                        column: x => x.Username,
                         principalTable: "Users",
                         principalColumn: "UserName",
                         onDelete: ReferentialAction.Cascade);
@@ -466,7 +514,7 @@ namespace POS.Migrations
                     BusinessIdNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Type = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     CustomerId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    Approver = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false)
+                    Approver = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -486,32 +534,11 @@ namespace POS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Conversations",
-                columns: table => new
-                {
-                    ConversationId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Comment = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
-                    PostDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Conversations", x => x.ConversationId);
-                    table.ForeignKey(
-                        name: "FK_Conversations_Users_UserName",
-                        column: x => x.UserName,
-                        principalTable: "Users",
-                        principalColumn: "UserName",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Homes",
                 columns: table => new
                 {
                     HomeId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Configuration = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -530,7 +557,7 @@ namespace POS.Migrations
                 columns: table => new
                 {
                     TokenId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -542,6 +569,137 @@ namespace POS.Migrations
                         column: x => x.UserName,
                         principalTable: "Users",
                         principalColumn: "UserName",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BlendsIngredients",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BlendId = table.Column<int>(type: "int", nullable: false),
+                    IngredientId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BlendsIngredients", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BlendsIngredients_Blends_BlendId",
+                        column: x => x.BlendId,
+                        principalTable: "Blends",
+                        principalColumn: "BlendId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BlendsIngredients_Ingredients_IngredientId",
+                        column: x => x.IngredientId,
+                        principalTable: "Ingredients",
+                        principalColumn: "IngredientId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GetIngredientLocations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IngredientId = table.Column<int>(type: "int", nullable: false),
+                    LocationId = table.Column<int>(type: "int", nullable: false),
+                    QuantityAmount = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GetIngredientLocations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_GetIngredientLocations_Ingredients_IngredientId",
+                        column: x => x.IngredientId,
+                        principalTable: "Ingredients",
+                        principalColumn: "IngredientId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_GetIngredientLocations_Locations_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "Locations",
+                        principalColumn: "LocationId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "IngredientOrigins",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IngredientId = table.Column<int>(type: "int", nullable: false),
+                    OriginId = table.Column<int>(type: "int", nullable: false),
+                    InvoiceId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IngredientOrigins", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_IngredientOrigins_Ingredients_IngredientId",
+                        column: x => x.IngredientId,
+                        principalTable: "Ingredients",
+                        principalColumn: "IngredientId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_IngredientOrigins_Origins_OriginId",
+                        column: x => x.OriginId,
+                        principalTable: "Origins",
+                        principalColumn: "OriginId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SupplierIngredients",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SupplierId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Quantity = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Cost = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    IngredientId = table.Column<int>(type: "int", nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    InvoiceId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SupplierIngredients", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SupplierIngredients_Ingredients_IngredientId",
+                        column: x => x.IngredientId,
+                        principalTable: "Ingredients",
+                        principalColumn: "IngredientId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "QuantityLocations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    QuantityId = table.Column<int>(type: "int", nullable: false),
+                    LocationId = table.Column<int>(type: "int", nullable: false),
+                    Amount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_QuantityLocations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_QuantityLocations_Locations_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "Locations",
+                        principalColumn: "LocationId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_QuantityLocations_Quantities_QuantityId",
+                        column: x => x.QuantityId,
+                        principalTable: "Quantities",
+                        principalColumn: "QuantityId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -589,6 +747,146 @@ namespace POS.Migrations
                         column: x => x.PostcodeId,
                         principalTable: "Postcodes",
                         principalColumn: "PostcodeId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OrderIngredient",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    IngredientId = table.Column<int>(type: "int", nullable: false),
+                    Quantity = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Shipped = table.Column<bool>(type: "bit", nullable: false),
+                    Invoiced = table.Column<bool>(type: "bit", nullable: false),
+                    UnitPrice = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Discount = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    DiscountPrice = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    TaxRate = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    LineTotal = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Margin = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderIngredient", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderIngredient_Ingredients_IngredientId",
+                        column: x => x.IngredientId,
+                        principalTable: "Ingredients",
+                        principalColumn: "IngredientId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OrderIngredient_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Orders",
+                        principalColumn: "OrderId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SaleBlends",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SaleId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    BlendId = table.Column<int>(type: "int", nullable: false),
+                    UnitPrice = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Discount = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    DiscountPrice = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    TaxRate = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    LineTotal = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Margin = table.Column<decimal>(type: "decimal(28,6)", precision: 28, scale: 6, nullable: false),
+                    Note = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SaleBlends", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SaleBlends_Blends_BlendId",
+                        column: x => x.BlendId,
+                        principalTable: "Blends",
+                        principalColumn: "BlendId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_SaleBlends_Sales_SaleId",
+                        column: x => x.SaleId,
+                        principalTable: "Sales",
+                        principalColumn: "SaleId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Brands",
+                columns: table => new
+                {
+                    BrandId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BrandName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LogoUrl = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    FormatType = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ContractId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Brands", x => x.BrandId);
+                    table.ForeignKey(
+                        name: "FK_Brands_Contracts_ContractId",
+                        column: x => x.ContractId,
+                        principalTable: "Contracts",
+                        principalColumn: "ContractId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ContractServices",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ContractId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    ServiceId = table.Column<int>(type: "int", nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ContractServices", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ContractServices_Contracts_ContractId",
+                        column: x => x.ContractId,
+                        principalTable: "Contracts",
+                        principalColumn: "ContractId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ContractServices_Services_ServiceId",
+                        column: x => x.ServiceId,
+                        principalTable: "Services",
+                        principalColumn: "ServiceId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NDAs",
+                columns: table => new
+                {
+                    NdaId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Agreement = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false),
+                    Creationdate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ContractId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NDAs", x => x.NdaId);
+                    table.ForeignKey(
+                        name: "FK_NDAs_Contracts_ContractId",
+                        column: x => x.ContractId,
+                        principalTable: "Contracts",
+                        principalColumn: "ContractId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -673,6 +971,29 @@ namespace POS.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "BrandAssets",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AssetName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    AssetUrl = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    FormatType = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    BrandId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BrandAssets", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BrandAssets_Brands_BrandId",
+                        column: x => x.BrandId,
+                        principalTable: "Brands",
+                        principalColumn: "BrandId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Addresses_PostcodeId",
                 table: "Addresses",
@@ -694,6 +1015,16 @@ namespace POS.Migrations
                 column: "IngredientId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BrandAssets_BrandId",
+                table: "BrandAssets",
+                column: "BrandId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Brands_ContractId",
+                table: "Brands",
+                column: "ContractId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Contracts_Approver",
                 table: "Contracts",
                 column: "Approver");
@@ -704,9 +1035,19 @@ namespace POS.Migrations
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Conversations_UserName",
+                name: "IX_ContractServices_ContractId",
+                table: "ContractServices",
+                column: "ContractId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ContractServices_ServiceId",
+                table: "ContractServices",
+                column: "ServiceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Conversations_ContactId",
                 table: "Conversations",
-                column: "UserName");
+                column: "ContactId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CustomerAddresses_AddressId",
@@ -749,6 +1090,11 @@ namespace POS.Migrations
                 column: "OriginId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Ingredients_BlendId",
+                table: "Ingredients",
+                column: "BlendId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Logons_Location",
                 table: "Logons",
                 column: "Location");
@@ -759,6 +1105,26 @@ namespace POS.Migrations
                 column: "TokenId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_NDAs_ContractId",
+                table: "NDAs",
+                column: "ContractId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderIngredient_IngredientId",
+                table: "OrderIngredient",
+                column: "IngredientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderIngredient_OrderId",
+                table: "OrderIngredient",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_CustomerId",
+                table: "Orders",
+                column: "CustomerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Postcodes_StateId",
                 table: "Postcodes",
                 column: "StateId");
@@ -767,6 +1133,16 @@ namespace POS.Migrations
                 name: "IX_Quantities_BlendId",
                 table: "Quantities",
                 column: "BlendId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuantityLocations_LocationId",
+                table: "QuantityLocations",
+                column: "LocationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_QuantityLocations_QuantityId",
+                table: "QuantityLocations",
+                column: "QuantityId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ReflectionAssets_AssetId",
@@ -782,6 +1158,21 @@ namespace POS.Migrations
                 name: "IX_Reflections_BlendId",
                 table: "Reflections",
                 column: "BlendId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SaleBlends_BlendId",
+                table: "SaleBlends",
+                column: "BlendId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SaleBlends_SaleId",
+                table: "SaleBlends",
+                column: "SaleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sales_CustomerId",
+                table: "Sales",
+                column: "CustomerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Sessions_UserName",
@@ -804,9 +1195,19 @@ namespace POS.Migrations
                 column: "SupplierId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_SupplierIngredients_IngredientId",
+                table: "SupplierIngredients",
+                column: "IngredientId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Suppliers_CurrencyId",
                 table: "Suppliers",
                 column: "CurrencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Email",
+                table: "Users",
+                column: "Email");
         }
 
         /// <inheritdoc />
@@ -816,13 +1217,19 @@ namespace POS.Migrations
                 name: "Apikeys");
 
             migrationBuilder.DropTable(
+                name: "Assesmblies");
+
+            migrationBuilder.DropTable(
                 name: "BlendsIngredients");
+
+            migrationBuilder.DropTable(
+                name: "BrandAssets");
 
             migrationBuilder.DropTable(
                 name: "BusinessIdentifiers");
 
             migrationBuilder.DropTable(
-                name: "Contracts");
+                name: "ContractServices");
 
             migrationBuilder.DropTable(
                 name: "Conversations");
@@ -840,10 +1247,19 @@ namespace POS.Migrations
                 name: "IngredientOrigins");
 
             migrationBuilder.DropTable(
+                name: "Invoices");
+
+            migrationBuilder.DropTable(
                 name: "Logons");
 
             migrationBuilder.DropTable(
-                name: "Quantities");
+                name: "NDAs");
+
+            migrationBuilder.DropTable(
+                name: "OrderIngredient");
+
+            migrationBuilder.DropTable(
+                name: "QuantityLocations");
 
             migrationBuilder.DropTable(
                 name: "ReflectionAssets");
@@ -852,19 +1268,22 @@ namespace POS.Migrations
                 name: "Roles");
 
             migrationBuilder.DropTable(
+                name: "SaleBlends");
+
+            migrationBuilder.DropTable(
                 name: "SupplierAddresses");
+
+            migrationBuilder.DropTable(
+                name: "SupplierIngredients");
 
             migrationBuilder.DropTable(
                 name: "Validations");
 
             migrationBuilder.DropTable(
-                name: "Customers");
+                name: "Brands");
 
             migrationBuilder.DropTable(
-                name: "Locations");
-
-            migrationBuilder.DropTable(
-                name: "Ingredients");
+                name: "Services");
 
             migrationBuilder.DropTable(
                 name: "Origins");
@@ -876,10 +1295,22 @@ namespace POS.Migrations
                 name: "Sessions");
 
             migrationBuilder.DropTable(
+                name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "Locations");
+
+            migrationBuilder.DropTable(
+                name: "Quantities");
+
+            migrationBuilder.DropTable(
                 name: "Assets");
 
             migrationBuilder.DropTable(
                 name: "Reflections");
+
+            migrationBuilder.DropTable(
+                name: "Sales");
 
             migrationBuilder.DropTable(
                 name: "Addresses");
@@ -888,25 +1319,34 @@ namespace POS.Migrations
                 name: "Suppliers");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Ingredients");
+
+            migrationBuilder.DropTable(
+                name: "Contracts");
+
+            migrationBuilder.DropTable(
+                name: "Postcodes");
 
             migrationBuilder.DropTable(
                 name: "Blends");
 
             migrationBuilder.DropTable(
-                name: "Postcodes");
+                name: "Customers");
+
+            migrationBuilder.DropTable(
+                name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "States");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "Currencies");
 
             migrationBuilder.DropTable(
                 name: "IntialContacts");
-
-            migrationBuilder.DropTable(
-                name: "Categories");
-
-            migrationBuilder.DropTable(
-                name: "States");
 
             migrationBuilder.DropTable(
                 name: "Countries");
