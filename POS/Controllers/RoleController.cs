@@ -6,9 +6,7 @@ using POS.Models;
 
 namespace POS.Controllers
 {
-    [Route("")]
-    [ApiController]
-    public class RoleController : ControllerBase
+    public class RoleController : BaseController
     {
         private readonly DataContext context;
 
