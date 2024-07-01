@@ -18,7 +18,6 @@ The POS application uses Angular to render the UI.<br /><br />
 <br />
 <br />
 <h3>To-Do:</h3>
-<h6>Relational Blueprint of POS_IMS</h6>
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/POS_IMS.jpg)
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
