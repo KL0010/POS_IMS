@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\vboxuser\\Desktop\\test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240630142245_InitialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POS\\Migrations\\20240630142245_InitialDbCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240701125954_UpdateUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POS\\Migrations\\20240701125954_UpdateUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\migrations\\20240630142245_initialdbcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\migrations\\20240630142245_initialdbcreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\ingredientorigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -24,10 +32,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\AppData\\Local\\Temp\\nkq4pnao..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -172,12 +176,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|c:\\users\\vboxuser\\desktop\\test\\pos\\models\\logon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF4EF19E-B0E8-4D6B-AA06-3A715F2A8844}|POS\\POS.csproj|solutionrelative:pos\\models\\logon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\AppData\\Local\\Temp\\nkq4pnao..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vboxuser\\AppData\\Local\\Temp\\nkq4pnao..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -191,7 +189,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "BlendIngredient.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\BlendIngredient.cs",
               "RelativeDocumentMoniker": "POS\\Models\\BlendIngredient.cs",
@@ -200,38 +198,50 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T14:10:59.546Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20240701125954_UpdateUser.cs",
+              "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240701125954_UpdateUser.cs",
+              "RelativeDocumentMoniker": "POS\\Migrations\\20240701125954_UpdateUser.cs",
+              "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240701125954_UpdateUser.cs",
+              "RelativeToolTip": "POS\\Migrations\\20240701125954_UpdateUser.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T12:59:54.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20240630142245_InitialDbCreation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240630142245_InitialDbCreation.cs",
               "RelativeDocumentMoniker": "POS\\Migrations\\20240630142245_InitialDbCreation.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240630142245_InitialDbCreation.cs",
               "RelativeToolTip": "POS\\Migrations\\20240630142245_InitialDbCreation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T14:22:45.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\User.cs",
               "RelativeDocumentMoniker": "POS\\Models\\User.cs",
               "ToolTip": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\User.cs",
               "RelativeToolTip": "POS\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA6AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T13:06:02.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Conversation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Conversation.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Conversation.cs",
@@ -239,23 +249,21 @@
               "RelativeToolTip": "POS\\Models\\Conversation.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T11:34:02.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T11:34:02.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SQLQuery1.sql ",
               "DocumentMoniker": "C:\\Users\\vboxuser\\AppData\\Local\\Temp\\nkq4pnao..sql",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\nkq4pnao..sql",
               "ToolTip": "SQLQuery1.sql *",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-30T13:53:48.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T13:53:48.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Home.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Home.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Home.cs",
@@ -263,12 +271,11 @@
               "RelativeToolTip": "POS\\Models\\Home.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T09:31:04.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T09:31:04.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IngredientOrigin.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\IngredientOrigin.cs",
               "RelativeDocumentMoniker": "POS\\Models\\IngredientOrigin.cs",
@@ -276,12 +283,11 @@
               "RelativeToolTip": "POS\\Models\\IngredientOrigin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:01:32.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:01:32.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Contract.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Contract.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Contract.cs",
@@ -289,12 +295,11 @@
               "RelativeToolTip": "POS\\Models\\Contract.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T11:42:12.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T11:42:12.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "InitialContact.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\InitialContact.cs",
               "RelativeDocumentMoniker": "POS\\Models\\InitialContact.cs",
@@ -302,12 +307,11 @@
               "RelativeToolTip": "POS\\Models\\InitialContact.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T14:06:32.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T14:06:32.154Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "20240630135204_InitialDbCreation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240630135204_InitialDbCreation.cs",
               "RelativeDocumentMoniker": "POS\\Migrations\\20240630135204_InitialDbCreation.cs",
@@ -315,12 +319,11 @@
               "RelativeToolTip": "POS\\Migrations\\20240630135204_InitialDbCreation.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:52:04.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T13:52:04.282Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "SupplierIngredient.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\SupplierIngredient.cs",
               "RelativeDocumentMoniker": "POS\\Models\\SupplierIngredient.cs",
@@ -328,12 +331,11 @@
               "RelativeToolTip": "POS\\Models\\SupplierIngredient.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAADwvxsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:03:00.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:03:00.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "20240630134945_InitialDbCreation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Migrations\\20240630134945_InitialDbCreation.cs",
               "RelativeDocumentMoniker": "POS\\Migrations\\20240630134945_InitialDbCreation.cs",
@@ -341,12 +343,11 @@
               "RelativeToolTip": "POS\\Migrations\\20240630134945_InitialDbCreation.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:49:45.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T13:49:45.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Customer.cs",
@@ -354,12 +355,11 @@
               "RelativeToolTip": "POS\\Models\\Customer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T11:42:36.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T11:42:36.888Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ContractService.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ContractService.cs",
               "RelativeDocumentMoniker": "POS\\Models\\ContractService.cs",
@@ -367,12 +367,11 @@
               "RelativeToolTip": "POS\\Models\\ContractService.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:53:36.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:53:36.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "BrandAsset.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\BrandAsset.cs",
               "RelativeDocumentMoniker": "POS\\Models\\BrandAsset.cs",
@@ -380,12 +379,11 @@
               "RelativeToolTip": "POS\\Models\\BrandAsset.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAAB4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:13:04.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T13:13:04.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "QuantityLocation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\QuantityLocation.cs",
               "RelativeDocumentMoniker": "POS\\Models\\QuantityLocation.cs",
@@ -393,12 +391,11 @@
               "RelativeToolTip": "POS\\Models\\QuantityLocation.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T00:03:26.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-29T00:03:26.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "OrderIngredient.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\OrderIngredient.cs",
               "RelativeDocumentMoniker": "POS\\Models\\OrderIngredient.cs",
@@ -406,12 +403,11 @@
               "RelativeToolTip": "POS\\Models\\OrderIngredient.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAABkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T11:22:04.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T11:22:04.198Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Service.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Service.cs",
@@ -419,12 +415,11 @@
               "RelativeToolTip": "POS\\Models\\Service.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:50:32.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:50:32.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ServiceAsset.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ServiceAsset.cs",
               "RelativeDocumentMoniker": "POS\\Models\\ServiceAsset.cs",
@@ -432,12 +427,11 @@
               "RelativeToolTip": "POS\\Models\\ServiceAsset.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAADwvx0AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T13:07:52.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T13:07:52.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Brand.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Brand.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Brand.cs",
@@ -445,12 +439,11 @@
               "RelativeToolTip": "POS\\Models\\Brand.cs",
               "ViewState": "AQIAABAAAAAAAAAAAADwvyMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:35:20.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:35:20.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Assesmbly.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Assesmbly.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Assesmbly.cs",
@@ -458,12 +451,11 @@
               "RelativeToolTip": "POS\\Models\\Assesmbly.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T12:28:37.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T12:28:37.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "IngredientLocation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\IngredientLocation.cs",
               "RelativeDocumentMoniker": "POS\\Models\\IngredientLocation.cs",
@@ -471,12 +463,11 @@
               "RelativeToolTip": "POS\\Models\\IngredientLocation.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAADwvxwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T00:22:32.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-29T00:22:32.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Blend.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Blend.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Blend.cs",
@@ -484,12 +475,11 @@
               "RelativeToolTip": "POS\\Models\\Blend.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T14:01:29.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T14:01:29.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Category.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Category.cs",
@@ -497,12 +487,11 @@
               "RelativeToolTip": "POS\\Models\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T13:59:45.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T13:59:45.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "POS\\Controllers\\RoleController.cs",
@@ -514,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Ingredient.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Ingredient.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Ingredient.cs",
@@ -522,12 +511,11 @@
               "RelativeToolTip": "POS\\Models\\Ingredient.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAADwvxwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T13:16:01.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T13:16:01.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Invoice.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Invoice.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Invoice.cs",
@@ -535,12 +523,11 @@
               "RelativeToolTip": "POS\\Models\\Invoice.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T11:42:04.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T11:42:04.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Order.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Order.cs",
@@ -552,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Supplier.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Supplier.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Supplier.cs",
@@ -564,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Role.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Role.cs",
@@ -576,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "Session.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Session.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Session.cs",
@@ -588,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "GPS.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\GPS.cs",
               "RelativeDocumentMoniker": "POS\\Models\\GPS.cs",
@@ -600,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Address.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Address.cs",
@@ -612,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "SaleBlend.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\SaleBlend.cs",
               "RelativeDocumentMoniker": "POS\\Models\\SaleBlend.cs",
@@ -620,12 +607,11 @@
               "RelativeToolTip": "POS\\Models\\SaleBlend.cs",
               "ViewState": "AQIAACQAAAAAAAAAAADwvzUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T08:51:48.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T08:51:48.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Quantity.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Quantity.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Quantity.cs",
@@ -633,12 +619,11 @@
               "RelativeToolTip": "POS\\Models\\Quantity.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T08:38:45.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T08:38:45.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Sale.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Sale.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Sale.cs",
@@ -646,12 +631,11 @@
               "RelativeToolTip": "POS\\Models\\Sale.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T08:31:45.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T08:31:45.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ReflectionAsset.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ReflectionAsset.cs",
               "RelativeDocumentMoniker": "POS\\Models\\ReflectionAsset.cs",
@@ -659,12 +643,11 @@
               "RelativeToolTip": "POS\\Models\\ReflectionAsset.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T12:08:29.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T12:08:29.139Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Asset.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Asset.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Asset.cs",
@@ -672,12 +655,11 @@
               "RelativeToolTip": "POS\\Models\\Asset.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T12:07:23.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T12:07:23.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "ApiKey.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\ApiKey.cs",
               "RelativeDocumentMoniker": "POS\\Models\\ApiKey.cs",
@@ -689,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Validation.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Validation.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Validation.cs",
@@ -697,12 +679,11 @@
               "RelativeToolTip": "POS\\Models\\Validation.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T13:07:07.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T13:07:07.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "Logon.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\Logon.cs",
               "RelativeDocumentMoniker": "POS\\Models\\Logon.cs",
@@ -714,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Models\\DataContext.cs",
               "RelativeDocumentMoniker": "POS\\Models\\DataContext.cs",
@@ -722,12 +703,11 @@
               "RelativeToolTip": "POS\\Models\\DataContext.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAACAAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T14:32:57.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T14:32:57.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vboxuser\\Desktop\\test\\POS\\Program.cs",
               "RelativeDocumentMoniker": "POS\\Program.cs",

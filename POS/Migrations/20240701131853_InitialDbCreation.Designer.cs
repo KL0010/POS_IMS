@@ -12,7 +12,7 @@ using POS.Models;
 namespace POS.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240630142245_InitialDbCreation")]
+    [Migration("20240701131853_InitialDbCreation")]
     partial class InitialDbCreation
     {
         /// <inheritdoc />
@@ -1364,18 +1364,16 @@ namespace POS.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("Password")
                         .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Salt")
+                    b.Property<byte[]>("Salt")
                         .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("varbinary(max)");
 
                     b.HasKey("UserName");
 

@@ -15,12 +15,10 @@ namespace POS.Models
         public string Email  { get; set; }
 
         [Required]
-        [MaxLength(128)]
-        public string Password { get; set; }
+        public byte[] Password { get; set; }
 
         [Required]
-        [MaxLength(128)]
-        public string Salt { get; set; }
+        public byte[] Salt { get; set; }
 
         [Required]
         public int RoleId { get; set; }
