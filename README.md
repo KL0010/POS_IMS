@@ -31,7 +31,7 @@ IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
 Authentication and Authorisation component and DatabaseSeeder.cs  will be available after 7/7/2024.
 
 <br/><br />
-<b>Note: Receipts table will in add in final phase of POS construstion.</b>
+<b>Note: Receipts table to Sales relationship will be added in final phase of POS construstion.</b>
 
 
 
