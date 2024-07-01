@@ -30,6 +30,9 @@ Further information in found in README.md in client root folder.<br /><br />
 IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
 Authentication and Authorisation component and DatabaseSeeder.cs  will be available after 7/7/2024.
 
+<br/><br />
+<b>Note: Receipts table will in add in final phase of POS construstion.</b>
+
 
 
 
