@@ -1,4 +1,4 @@
-89<h3><b>Application Under construction: Utilising Code First Approach</b></h3>
+<h3><b>Application Under construction: Utilising Code First Approach</b></h3>
 <b>Point of Sale (POS) and Inventory Management System (IMS)</b> is a .NET 8.0 Core web API and console application.</b>. <br />
 AI/ML is used for regression analysis in customer behaviour predictions.
 <h4>System is designed for producers of blended products to keep track of Blends and Ingredients.</h4>
@@ -21,6 +21,7 @@ The POS application uses Angular to render the UI.<br /><br />
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/POS_IMS.jpg)
+[alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/AspIdentity.jpg)
 <br />
 In root folder of POS, run in CMD:
 dotnet run.
@@ -28,11 +29,11 @@ dotnet run.
 Then go into client root folder to run Angular. <br />
 Further information in found in README.md in client root folder.<br /><br />
 IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
-Becuase of Owin, Authentication and Authorisation with 2FA and DatabaseSeeder.cs  will be available after 14/7/2024. <b>Owin OAuth2</b> will be the backbone of the <b>Authentication and Authorisation</b> component.
 
 <br/><br />
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
+Owin OAuth2 is the backbone of Authentication and Authorisation component.
 Due to Owin, Technical and User documentation for Authentication and Authorisation will be available after the 21/7/2024, when component has been rolled out.
 
 
