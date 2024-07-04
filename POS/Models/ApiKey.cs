@@ -6,7 +6,7 @@ namespace POS.Models
     public class ApiKey
     {
         [Key]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string Username { get; set; }
 
         [Required]

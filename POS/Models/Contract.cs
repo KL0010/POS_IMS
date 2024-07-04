@@ -22,7 +22,7 @@ namespace POS.Models
         public string Type { get; set; }
 
         [Required]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string CustomerId { get; set; }
 
         [ForeignKey(nameof(CustomerId))]
@@ -30,7 +30,7 @@ namespace POS.Models
         public Customer Customer { get; set; }
 
         [Required]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string Approver { get; set; }
 
         [ForeignKey(nameof(Approver))]

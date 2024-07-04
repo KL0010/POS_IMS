@@ -10,7 +10,7 @@ namespace POS.Models
         public string HomeId { get; set; }
 
         [Required]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string UserName { get; set; }
 
         [ForeignKey(nameof(UserName))]

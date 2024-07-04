@@ -9,7 +9,7 @@ namespace POS.Models
         public int ConversationId { get; set; }
 
         [Required]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string UserName { get; set; }
 
         [Required]
@@ -20,7 +20,7 @@ namespace POS.Models
         public DateTime PostDate { get; set; }
 
         [Required]
-        [MaxLength(150)]
+        [MaxLength(256)]
         public string ContactId { get; set; }
 
         [ForeignKey(nameof(ContactId))]

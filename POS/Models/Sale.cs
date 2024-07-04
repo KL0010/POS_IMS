@@ -26,7 +26,7 @@ namespace POS.Models
         public string Status { get; set; }
 
         [Required]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string CustomerId { get; set; }
 
         [ForeignKey(nameof(CustomerId))]

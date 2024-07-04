@@ -6,7 +6,7 @@ namespace POS.Models
     public class Customer
     {
         [Key]
-        [MaxLength(128)]
+        [MaxLength(450)]
         public string CustomerId { get; set; }
 
         [Required]

@@ -1,15 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace POS.Models
 {
-    public class Role
+    public class Role : IdentityRole
     {
-        [Key]
-        public int RoleId { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string RoleName { get; set; }
 
         [Required]
         [MaxLength(100)]

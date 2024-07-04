@@ -11,7 +11,7 @@ namespace POS.Models
         public string OrderId { get; set; }
 
         [Required]
-        [StringLength(128)]
+        [StringLength(450)]
         public string CustomerId { get; set; }
 
         [ForeignKey(nameof(CustomerId))]

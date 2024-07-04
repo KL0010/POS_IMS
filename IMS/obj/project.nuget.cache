@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "kpl69RDMW+Xr1EhEKxQKE0GUIXYKoBU7gei1BB66ZVykD0U/BFWhUarabfu7055oBLpjoIFaT9pdB/w8be7uIg==",
+  "dgSpecHash": "x68Prjb1d9HxpKW/p1SMA7k4+QanbS/Cfol0wnO+YVW4zSShZPP5+PsSr9YiAnwy+SGrF6PXVNP58CGQmxmxKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\vboxuser\\Desktop\\test\\IMS\\IMS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vboxuser\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.aspnetcore.owin\\8.0.6\\microsoft.aspnetcore.owin.8.0.6.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

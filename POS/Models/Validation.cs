@@ -7,7 +7,7 @@ namespace POS.Models
     public class Validation
     {
         [Key]
-        [MaxLength(150)]
+        [MaxLength(256)]
         public string Email { get; set; }
 
         [Required]

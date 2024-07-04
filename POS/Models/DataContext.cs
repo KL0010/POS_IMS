@@ -1,16 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace POS.Models
 {
-    public partial class DataContext : DbContext
+    public partial class DataContext : IdentityDbContext
     {
         public DataContext(DbContextOptions
         <DataContext> options)
             : base(options)
         {
         }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<InitialContact> IntialContacts { get; set; }
         public virtual DbSet<Validation> Validations { get; set; }
         public virtual DbSet<ApiKey> Apikeys { get; set; }
@@ -57,16 +56,5 @@ namespace POS.Models
         public virtual DbSet<ContractService> ContractServices { get; set; }
         public virtual DbSet<Assesmbly> Assesmblies { get; set; }
 
-
-
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Role>(entity => {
-                entity.HasKey(k => k.RoleId);
-            });
-            OnModelCreatingPartial(modelBuilder);
-        }
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

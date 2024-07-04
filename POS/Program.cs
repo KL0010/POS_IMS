@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using POS.Models;
+using Microsoft.AspNetCore.Owin;
 
 var builder = WebApplication.CreateBuilder(args);
 
