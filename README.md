@@ -20,6 +20,7 @@ The POS application uses Angular to render the UI.<br /><br />
 <h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
+Owin OAuth2 is the backbone of Authentication and Authorisation component. <br />
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/POS_IMS.jpg)
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/AspIdentity.jpg)
 <br />
@@ -33,8 +34,7 @@ IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
 <br/><br />
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
-Owin OAuth2 is the backbone of Authentication and Authorisation component.
-Due to Owin, Technical and User documentation for Authentication and Authorisation will be available after the 21/7/2024, when component has been rolled out.
+Technical and User documentation for Authentication and Authorisation will be available after the 21/7/2024, when component has been rolled out.
 
 
 
