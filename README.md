@@ -21,7 +21,7 @@ The POS application uses Angular to render the UI.<br /><br />
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/POS_IMS.jpg)
-[alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/AspIdentity.jpg)
+![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/AspIdentity.jpg)
 <br />
 In root folder of POS, run in CMD:
 dotnet run.
