@@ -20,7 +20,7 @@ The POS application uses Angular to render the UI.<br /><br />
 <h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
-<b>Owin OAuth2</b>,the backbone of Authentication and Authorisation component. <br />
+<b>System extends Owin OAuth2</b>,the backbone of Authentication and Authorisation component. <br />
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/POS_IMS.jpg)
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/AspIdentity.jpg)
 <br />
