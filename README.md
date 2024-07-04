@@ -31,7 +31,6 @@ Then go into client root folder to run Angular. <br />
 Further information in found in README.md in client root folder.<br /><br />
 IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
 
-<br/><br />
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
 Technical and User documentation for Authentication and Authorisation will be available after the 21/7/2024, when component has been rolled out.
