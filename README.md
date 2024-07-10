@@ -4,6 +4,7 @@ AI/ML is used for regression analysis in customer behaviour predictions.
 <h4>System is designed for producers of blended products to keep track of Blends and Ingredients.</h4>
 Documentation will be available after basic functionalities are rolled out.</br />
 The POS application uses Angular to render the UI.<br /><br />
+Tron network is used smart contracts and validation of assets ownership.
 <h3>Environment:</h3>
 
 (1) .NET 8 Core
@@ -15,6 +16,7 @@ The POS application uses Angular to render the UI.<br /><br />
 (4) MS SQL 2023
 <br />
 (5) Python for AI/ML
+(6) Tron network
 <br />
 <br />
 <h3>To-Do:</h3>
