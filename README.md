@@ -23,7 +23,7 @@ Tron network is used smart contracts and validation of assets ownership.
 <h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
-System uses <b>IdentityUserDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
+System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
 <br />
 Then in root folder of POS_IMS, run in CMD:
