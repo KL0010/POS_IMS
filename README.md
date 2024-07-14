@@ -29,8 +29,10 @@ System uses <b>IdentityUserDbContext</b>, a trusted, battle hardened Authenticat
 In root folder of POS_IMS, run in CMD:
 dotnet run.
 <br /> 
+Open web browser to URL https://192.168.1.103:7184.<br />
+Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json <br />
 <b>One and only one Super admininstrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.
-<b>Make sure password is strong for the first register of user.</b>
+Make sure password is strong for the first register of user.
 Email validation and 2FA login hasn't been implemented yet.
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
