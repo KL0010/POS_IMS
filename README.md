@@ -31,7 +31,7 @@ dotnet run.
 <br /> 
 One and only one Super admininstrator is created on first entry to AspNetUserRoles table, which is triggered when first user is created.
 <b>Make sure password is strong for the first register of user.</b>
-
+Email validation and 2FA login hasn't been implemented yet.
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
 Technical and User documentation for Authentication and Authorisation will be available after the 31/7/2024, when component has been fully rolled out. <br /><br />
