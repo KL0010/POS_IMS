@@ -26,8 +26,7 @@ Tron network is used smart contracts and validation of assets ownership.
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
 System extends <b>Owin OAuth2</b>, and forms the backbone to Authentication and Authorisation component. <br />
-![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/POS_IMS.jpg)
-![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS/imgs/AspIdentity.jpg)
+![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
 <br />
 In root folder of POS, run in CMD:
 dotnet run.
