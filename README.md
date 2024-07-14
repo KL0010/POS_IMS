@@ -19,8 +19,6 @@ Tron network is used smart contracts and validation of assets ownership.
 <br />
 (5) Tron network
 <br />
-(6) Console app for IMS
-<br />
 <br />
 <h3>To-Do:</h3>
 
