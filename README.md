@@ -29,7 +29,7 @@ System uses <b>IdentityUserDbContext</b>, a trusted, battle hardened Authenticat
 In root folder of POS_IMS, run in CMD:
 dotnet run.
 <br /> 
-One and only one Super admininstrator is created on first entry to AspNetUserRoles table, which is triggered when first user is created.
+<b>One and only one Super admininstrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.
 <b>Make sure password is strong for the first register of user.</b>
 Email validation and 2FA login hasn't been implemented yet.
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
