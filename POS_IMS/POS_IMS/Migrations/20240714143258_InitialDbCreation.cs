@@ -526,7 +526,7 @@ namespace POS_IMS.Migrations
                 {
                     LogonId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Userid = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     Login = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LogOff = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Location = table.Column<int>(type: "int", nullable: false),
@@ -1111,11 +1111,11 @@ namespace POS_IMS.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "5686ee86-de65-40df-904b-9580e58ba028", null, "SuperAdmin", "SUPERADMIN" },
-                    { "5cb46aca-70e4-448d-a48c-060196e927f8", null, "User", "USER" },
-                    { "7aee12c4-0923-4145-a032-5024d3c7bfb3", null, "Sales", "SALES" },
-                    { "8d824955-c70f-476f-b278-4e28bad800fc", null, "Admin", "ADMIN" },
-                    { "c8bea381-3dd6-4d65-9ce8-82e14a8152cb", null, "Customer", "CUSTOMER" }
+                    { "493f974f-d400-46d7-ad39-d1526c11ae02", null, "Customer", "CUSTOMER" },
+                    { "59aff194-dcce-4030-be1f-7d1f72d23367", null, "User", "USER" },
+                    { "91fe2c50-212f-41f7-87b4-58d9f3ceb39a", null, "SuperAdmin", "SUPERADMIN" },
+                    { "a1891b7b-3f02-4fa1-a504-0c7d51dc71f9", null, "Sales", "SALES" },
+                    { "d18c37bb-c087-450d-8978-419e89909ef1", null, "Admin", "ADMIN" }
                 });
 
             migrationBuilder.CreateIndex(

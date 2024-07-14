@@ -29,7 +29,7 @@ namespace POS_IMS.Controllers
             if (usr != null) {
                 var homeUser = _context.Homes.FirstOrDefault(acc => acc.UserId == usr.Id);
 
-                return View("IndexAsync", homeUser);
+                return View(homeUser);
             }
 
             return BadRequest("An Error has occurred...");

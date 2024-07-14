@@ -51,31 +51,31 @@ namespace POS_IMS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5cb46aca-70e4-448d-a48c-060196e927f8",
+                            Id = "59aff194-dcce-4030-be1f-7d1f72d23367",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "7aee12c4-0923-4145-a032-5024d3c7bfb3",
+                            Id = "a1891b7b-3f02-4fa1-a504-0c7d51dc71f9",
                             Name = "Sales",
                             NormalizedName = "SALES"
                         },
                         new
                         {
-                            Id = "c8bea381-3dd6-4d65-9ce8-82e14a8152cb",
+                            Id = "493f974f-d400-46d7-ad39-d1526c11ae02",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
-                            Id = "5686ee86-de65-40df-904b-9580e58ba028",
+                            Id = "91fe2c50-212f-41f7-87b4-58d9f3ceb39a",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = "8d824955-c70f-476f-b278-4e28bad800fc",
+                            Id = "d18c37bb-c087-450d-8978-419e89909ef1",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -1014,10 +1014,10 @@ namespace POS_IMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("Userid")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LogonId");
 

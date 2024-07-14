@@ -9,8 +9,8 @@ namespace POS.Models
         public int LogonId { get; set; }
 
         [Required]
-        [MaxLength(150)]
-        public string UserName { get; set; }
+        [MaxLength(450)]
+        public string Userid { get; set; }
 
         [Required]
         public DateTime Login { get; set; }
