@@ -26,7 +26,7 @@ Initial creation of database by running command in Package Manager: Update-datab
 System uses <b>IdentityUserDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
 <br />
-In root folder of POS_IMS, run in CMD:
+Then in root folder of POS_IMS, run in CMD:
 dotnet run.
 <br /> 
 Open web browser to URL https://192.168.1.103:7184.<br />
