@@ -13,31 +13,29 @@ Tron network is used smart contracts and validation of assets ownership.
 <br />
 (2) NodeJs
 <br />
-(3) Angular
+(3) MS SQL 2023
 <br />
-(4) MS SQL 2023
+(4) Python for AI/ML
 <br />
-(5) Python for AI/ML
+(5) Tron network
 <br />
-(6) Tron network
+(6) Console app for IMS
 <br />
 <br />
 <h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
-System extends <b>Owin OAuth2</b>, and forms the backbone to Authentication and Authorisation component. <br />
+System users <b>IdentityUserDbConext</b> A trusted, battle hardened Authentication and Authorisation component. <br />
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
 <br />
-In root folder of POS, run in CMD:
+In root folder of POS_IMS, run in CMD:
 dotnet run.
 <br /> 
-Then go into client root folder to run Angular. <br />
-Further information in found in README.md in client root folder.<br /><br />
-IMS.exe is located in bin folder in IMS root folder.<br/> <br/>
 
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
-Technical and User documentation for Authentication and Authorisation will be available after the 21/7/2024, when component has been rolled out.
+Technical and User documentation for Authentication and Authorisation will be available after the 31/7/2024, when component has been fully rolled out. <br /><br />
+IMS construction will begin after POS construction has been completed.
 
 
 
