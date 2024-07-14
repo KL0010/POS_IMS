@@ -31,8 +31,8 @@ dotnet run.
 <br /> 
 Open web browser to URL https://192.168.1.103:7184.<br />
 Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json.<br />
-<b>One and only one Super admininstrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.
-Make sure password is strong for the first register of user.
+<b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.<br />
+System can have many Administrators <br />.
 Email validation and 2FA login hasn't been implemented yet.
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
