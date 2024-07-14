@@ -33,7 +33,7 @@ Open web browser to URL https://192.168.1.103:7184.<br />
 Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json.<br />
 <b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.<br />
 System can have many Administrators. <br />
-Email validation and 2FA login hasn't been implemented yet. This feature will be rolled out after 21/7/2024.
+Email validation and 2FA login hasn't been implemented yet. This feature will be rolled out after 21/7/2024. <br /> <br />
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
 Technical and User documentation for Authentication and Authorisation will be available after the 31/7/2024, when component has been fully rolled out. <br /><br />
