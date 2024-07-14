@@ -1,5 +1,5 @@
 <h3><b>Application Under construction: Utilising Code First Approach</b></h3>
-<b>Point of Sale (POS) and Inventory Management System (IMS)</b> is a .NET 8.0 Core.MVC and console application.</b>. <br />
+<b>Point of Sale (POS) and Inventory Management System (IMS)</b> is a .NET 8.0 Core.MVC and console application..NET Core is chosen due to the open source nature and is maintained by Microsoft. </b> <br />
 AI/ML is used for regression analysis in customer behaviour predictions.
 <br/>
 Blockchain technology is used for smart contracts and to protect assets ownership.
