@@ -25,12 +25,14 @@ Tron network is used smart contracts and validation of assets ownership.
 <h3>To-Do:</h3>
 
 Initial creation of database by running command in Package Manager: Update-database InitialDbCreation <br />
-System users <b>IdentityUserDbConext</b> A trusted, battle hardened Authentication and Authorisation component. <br />
+System uses <b>IdentityUserDbConext</b>, a trusted, battle hardened Authentication and Authorisation component. 
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
 <br />
 In root folder of POS_IMS, run in CMD:
 dotnet run.
 <br /> 
+One and only one Super admininstrator is created on first entry to AspNetUserRoles table, which is triggered when first user is created.
+<b>Make sure password is strong for the first register of user.</b>
 
 <b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
 
