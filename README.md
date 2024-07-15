@@ -5,7 +5,7 @@ AI/ML is used for regression analysis in customer behaviour predictions.
 Blockchain technology is used for smart contracts and to protect assets ownership.
 <h4>System is designed for producers of blended products to keep track of Blends and Ingredients.</h4>
 Documentation will be available after basic functionalities are rolled out.</br />
-The POS application uses Angular to render the UI.<br /><br />
+<br />
 Tron network is used smart contracts and validation of assets ownership.
 <h3>Environment:</h3>
 
