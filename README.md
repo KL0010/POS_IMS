@@ -6,7 +6,7 @@ Blockchain technology is used for smart contracts and to protect assets ownershi
 <h4>System is designed for producers of blended products to keep track of Blends and Ingredients.</h4>
 Documentation will be available after basic functionalities are rolled out.</br />
 <br />
-Tron network is used smart contracts and validation of assets ownership.
+Tron network is used for smart contracts and validation of assets ownership.
 <h3>Environment:</h3>
 
 (1) .NET 8 Core
