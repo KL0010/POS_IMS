@@ -20,7 +20,6 @@ namespace POS_IMS.Models
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
             var response = await client.SendEmailAsync(msg);
 
-
             if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
             {
                 return true;
