@@ -117,17 +117,6 @@ namespace POS_IMS.Areas.Identity.Pages.Account
 
             var authenticatorCode = Input.TwoFactorCode.Replace(" ", string.Empty).Replace("-", string.Empty);
 
-            TwilioClient.Init("[Your Trilio SID account number]", "[Your Trilio token]"); // change init values to your Trilio credentials
-
-            var messageOptions = new CreateMessageOptions(
-              new PhoneNumber("+" + user.PhoneNumber));
-            messageOptions.From = new PhoneNumber("[Your Trilio phone number]"); // change number to your Trilio phone number
-            messageOptions.Body = "POS_IMS 2FA code: " + authenticatorCode + " has been consumed and cannot be used again.";
-
-
-            var message = MessageResource.Create(messageOptions);
-            Console.WriteLine(message.Body); ;
-
             var result = await _signInManager.TwoFactorSignInAsync(TokenOptions.DefaultPhoneProvider, authenticatorCode, rememberMe, Input.RememberMachine);
 
             if (result.Succeeded)

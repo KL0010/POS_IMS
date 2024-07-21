@@ -155,7 +155,7 @@ namespace POS_IMS.Areas.Identity.Pages.Account
 
 
                     var message = MessageResource.Create(messageOptions);
-                    Console.WriteLine(message.Body); ;
+                    Console.WriteLine(message.Body);
 
                     return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
                 }
