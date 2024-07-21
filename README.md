@@ -42,6 +42,8 @@ System can have many Administrators. <br />
 <b>Critical:</b> Input an email and mobile number you can access. Login cannot occur if email has not been validated through confirm link sent to email account, and then pass 2fa logic. Example is shown below. <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
 <br />
+<img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/confirmEmail.jpg">
+<br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg" width="400" height="790">
 <br />
 
