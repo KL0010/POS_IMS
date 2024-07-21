@@ -11,6 +11,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
+using Twilio.Types;
+using Twilio;
+
+using System;
+using System.Collections.Generic;
+using Twilio.Rest.Api.V2010.Account;
+using POS_IMS.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace POS_IMS.Areas.Identity.Pages.Account
 {
@@ -19,15 +28,17 @@ namespace POS_IMS.Areas.Identity.Pages.Account
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<LoginWith2faModel> _logger;
+        private ApplicationDbContext _context;
 
         public LoginWith2faModel(
             SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
-            ILogger<LoginWith2faModel> logger)
+            ILogger<LoginWith2faModel> logger, ApplicationDbContext context)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
+            _context = context;
         }
 
         /// <summary>
@@ -106,12 +117,23 @@ namespace POS_IMS.Areas.Identity.Pages.Account
 
             var authenticatorCode = Input.TwoFactorCode.Replace(" ", string.Empty).Replace("-", string.Empty);
 
-            var result = await _signInManager.TwoFactorAuthenticatorSignInAsync(authenticatorCode, rememberMe, Input.RememberMachine);
+            TwilioClient.Init("AC6622ea9e99757095c5ec1be155d69041", "f149bb0301fad2d7aa1709ce57f3ca8b");
 
-            var userId = await _userManager.GetUserIdAsync(user);
+            var messageOptions = new CreateMessageOptions(
+              new PhoneNumber("+61412509235"));
+            messageOptions.From = new PhoneNumber("+12513256137");
+            messageOptions.Body = "POS_IMS 2FA code: " + authenticatorCode;
+
+
+            var message = MessageResource.Create(messageOptions);
+            Console.WriteLine(message.Body); ;
+
+            var result = await _signInManager.TwoFactorSignInAsync(TokenOptions.DefaultPhoneProvider, authenticatorCode, rememberMe, Input.RememberMachine);
 
             if (result.Succeeded)
             {
+                _context.UserTokens.Where(x => x.UserId == user.Id).ExecuteDelete(); // Delete entry 2fa code.Used only once and not needed anymore. 
+                _context.SaveChanges();
                 _logger.LogInformation("User with ID '{UserId}' logged in with 2fa.", user.Id);
                 return LocalRedirect(returnUrl);
             }

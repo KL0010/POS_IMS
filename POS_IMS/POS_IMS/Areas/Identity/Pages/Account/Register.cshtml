@@ -23,6 +23,11 @@
                 <span asp-validation-for="Input.Email" class="text-danger" id="emailDanger"></span>
             </div>
             <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" id="mobile" autocomplete="off" aria-required="true" placeholder="+610413455455" />
+                <label asp-for="Input.PhoneNumber">Mobile (include country code first)</label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger" id="mobileDanger"></span>
+            </div>
+            <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.Password">Password</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
@@ -75,6 +80,7 @@
         $(document).ready(function () {
             var urlUsername = '@Url.Action("GetUsername", "Api")';
             var urlEmail = '@Url.Action("GetEmail", "Api")';
+            var urlMobile = '@Url.Action("GetMobile", "Api")';
             $("#username").focus(function () {
                 if ($("#username").val().length > 0) {
                     $("#username").val('');
@@ -83,6 +89,11 @@
             $("#email").focus(function () {
                 if ($("#email").val().length > 0) {
                     $("#email").val('');
+                }
+            });
+            $("#mobile").focus(function () {
+                if ($("#mobile").val().length > 0) {
+                    $("#mobile").val('');
                 }
             });
             $("#username").on("change", function () {
@@ -111,6 +122,19 @@
                     }
                 });
             });
+            $("#mobile").on("change", function () {
+                $.ajax({
+                    url: urlMobile,
+                    type: 'Post',
+                    dataType: 'json',
+                    data: { 'phoneNumber': $("#mobile").val() },
+                    success: function (response) {
+                        if (response == true) {
+                            $('#mobileDanger').text("Phone number already Exist. Please enter another...");
+                        }
+                    }
+                });
+            })
         });
     </script>
 }

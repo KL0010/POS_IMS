@@ -14,18 +14,31 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Twilio.Types;
+using Twilio;
+
+using System;
+using System.Collections.Generic;
+using Twilio.Rest.Api.V2010.Account;
+using POS_IMS.Data;
+using POS_IMS.Models;
+
 
 namespace POS_IMS.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly ApplicationDbContext _context;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
+            _context = context;
         }
 
         /// <summary>
@@ -118,6 +131,32 @@ namespace POS_IMS.Areas.Identity.Pages.Account
                 }
                 if (result.RequiresTwoFactor)
                 {
+                    //Generate the Two Factor Authentication Token
+                    var user = _context.Users.FirstOrDefault(acc => acc.UserName == Input.Username);
+                    var TwoFactorToken = await _userManager.GenerateTwoFactorTokenAsync(user, TokenOptions.DefaultPhoneProvider);
+
+                    var twoFa = new IdentityUserToken<string>
+                    {
+                        UserId = user.Id,
+                        LoginProvider = "Default",
+                        Name = "2Fa",
+                        Value = TwoFactorToken.ToString(),
+                    };
+
+                    _context.UserTokens.Add(twoFa);
+                    await _context.SaveChangesAsync();
+
+                    TwilioClient.Init("[Twilio SID Account]", "[Twilio token]"); // change the init values with your Trilio credentials
+
+                    var messageOptions = new CreateMessageOptions(
+                      new PhoneNumber("+" + user.PhoneNumber));
+                    messageOptions.From = new PhoneNumber("[Your Trilio phone number]"); // change the number to PhoneNumber with the your Trilio phone number
+                    messageOptions.Body = "POS_IMS 2FA code: " + TwoFactorToken;
+
+
+                    var message = MessageResource.Create(messageOptions);
+                    Console.WriteLine(message.Body); ;
+
                     return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
                 }
                 if (result.IsLockedOut)

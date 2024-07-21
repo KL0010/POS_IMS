@@ -23,5 +23,11 @@ namespace POS_IMS.Controllers
         {
             return _userManager.Users.Any(x => x.Email == email);
         }
+
+        [HttpPost]
+        public bool GetMobile(string phoneNumber)
+        {
+            return _userManager.Users.Any(x => x.PhoneNumber == phoneNumber);
+        }
     }
 }

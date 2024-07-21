@@ -11,8 +11,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using POS.Models;
 using POS_IMS.Data;
+using POS_IMS.Models;
+using POS_IMS.Services;
 
 namespace POS_IMS.Areas.Identity.Pages.Account
 {
@@ -82,6 +85,11 @@ namespace POS_IMS.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            [Required]
+            [StringLength(15, MinimumLength = 12, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.")]
+            [Display(Name = "Mobile Number")]
+            public string PhoneNumber { get; set; }
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -116,6 +124,8 @@ namespace POS_IMS.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+                user.TwoFactorEnabled = true; // set 2FA as default
+                user.PhoneNumber = Input.PhoneNumber;
 
                 await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
@@ -146,6 +156,8 @@ namespace POS_IMS.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    EmailHelper emailHelper = new EmailHelper();
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -157,8 +169,7 @@ namespace POS_IMS.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await emailHelper.SendEmail(Input.Email, $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
