@@ -117,11 +117,11 @@ namespace POS_IMS.Areas.Identity.Pages.Account
 
             var authenticatorCode = Input.TwoFactorCode.Replace(" ", string.Empty).Replace("-", string.Empty);
 
-            TwilioClient.Init("AC6622ea9e99757095c5ec1be155d69041", "f149bb0301fad2d7aa1709ce57f3ca8b");
+            TwilioClient.Init("[Your Trilio SID account number]", "[Your Trilio token]"); // change init values to your Trilio credentials
 
             var messageOptions = new CreateMessageOptions(
-              new PhoneNumber("+61412509235"));
-            messageOptions.From = new PhoneNumber("+12513256137");
+              new PhoneNumber("+" + user.PhoneNumber));
+            messageOptions.From = new PhoneNumber("[Your Trilio phone number]"); // change number to your Trilio phone number
             messageOptions.Body = "POS_IMS 2FA code: " + authenticatorCode;
 
 
