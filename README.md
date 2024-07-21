@@ -40,7 +40,7 @@ Trilio is used to send emails and SMS. Email address validation and 2FA login mu
 3. Go to POS_IMS/Areas/Account/LoginWith2fa.cshtml and change init values your Trilio credentials. <br /><br />
 Currently, the system sends 2 identical 2FA message. One when login in and the other on deletion of the token. Next update will change the 2nd SMS to state token has been deleted. <br>
 
-<b>Critical</b> to input an email and mobile you can access. Login cannot occur if email has not been validated, and pass 2fa logic. Example is shown below.
+<b>Critical</b> to input an email and mobile you can access. Login cannot occur if email has not been validated, and pass 2fa logic. Example is shown below. <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
 <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg" width="400" height="790">
