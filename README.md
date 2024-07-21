@@ -37,8 +37,12 @@ System can have many Administrators. <br />
 Trilio is used to send emails and SMS. Email address validation and 2FA login must be changed. <br />
 1. Go to POS_IMS/Models/EmailHelper and change SendGrid API key (line 13). Then change the email address that is libked to it (line 15). <br >
 2. Go to POS_IMS/Areas/Account/Login.cshtml and change Trilio init to your Trilio credentials. <br />
-3. Go to POS_IMS/Areas/Account/LoginWith2fa.cshtml and change init values your Trilio credentials <br /><br />
-Currently, the system sends 2 identical 2FA message. One when login in and the other on deletion of the token. Next update will change the 2nd SMS to state token has been deleted.
+3. Go to POS_IMS/Areas/Account/LoginWith2fa.cshtml and change init values your Trilio credentials. <br /><br />
+Currently, the system sends 2 identical 2FA message. One when login in and the other on deletion of the token. Next update will change the 2nd SMS to state token has been deleted. <br>
+
+<b>Critical</b> to input an email and mobile you can access. Login cannot occur if email has not been validated, and pass 2fa logic.
+![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg)
+![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg)
 
 Technical and User documentation for Authentication and Authorisation will be available after the 31/7/2024, when component has been fully rolled out. <br /><br />
 IMS construction will begin after POS construction has been completed.
