@@ -33,8 +33,12 @@ Open web browser to URL https://192.168.1.103:7184.<br />
 Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json.<br />
 <b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.<br />
 System can have many Administrators. <br />
-Email validation and 2FA login hasn't been implemented yet. This feature will be rolled out after 21/7/2024. <br /> <br />
-<b>Note: Receipts table to Sales relationship will be added in final phase of POS construction.</b>
+
+Trilio is used to send emails and SMS. Email address validation and 2FA login must be changed. <br />
+1. Go to POS_IMS/Models/EmailHelper and change SendGrid API key (line 13). Then change the email address that is libked to it (line 15). <br >
+2. Go to POS_IMS/Areas/Account/Login.cshtml and change Trilio init to your Trilio credentials. <br />
+3 . Got to POS_IMS/Areas/Account/LoginWith2fa.cshtml and change init values your Trilio credentials <br /><br />
+Currently, the system sends 2 identical 2FA message. One when login in and the other on deletion of the token. Next update will change the 2nd SMS to state token has been deleted.
 
 Technical and User documentation for Authentication and Authorisation will be available after the 31/7/2024, when component has been fully rolled out. <br /><br />
 IMS construction will begin after POS construction has been completed.
