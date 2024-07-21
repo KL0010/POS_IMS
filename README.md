@@ -40,6 +40,7 @@ System can have many Administrators. <br />
 3. Go to POS_IMS/Areas/Account/LoginWith2fa.cshtml and change init values your Trilio credentials. <br /><br />
 The system sends two 2FA messages. One when user logs in to send the token values, and the other on deletion of the token. <br /><br />
 
+<b>Note: Password change hasn't been implemented yet. </b> <br />
 <b>Critical</b> to input an email and mobile you can access. Login cannot occur if email has not been validated, and pass 2fa logic. Example is shown below. <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
 <br />
