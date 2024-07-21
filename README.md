@@ -41,7 +41,7 @@ System can have many Administrators. <br />
 The system sends two 2FA messages. One when user logs in to send the token values, and the other on deletion of the token. <br /><br />
 
 <b>Note:</b> Password change hasn't been implemented yet.<br />
-<b>Critical</b> to input an email and mobile you can access. Login cannot occur if email has not been validated, and pass 2fa logic. Example is shown below. <br />
+<b>Critical:</b> Input an email and mobile you can access. Login cannot occur if email has not been validated through confirm link sent to email account, and then pass 2fa logic. Example is shown below. <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
 <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg" width="400" height="790">
