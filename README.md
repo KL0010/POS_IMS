@@ -35,7 +35,7 @@ Domain address can be changed by changing the applicationUrl in launchSettings.j
 System can have many Administrators. <br />
 
 <b>Trilio</b> is used to send emails and SMS. Email address validation and 2FA login must be changed. <br />
-1. Go to POS_IMS/Models/EmailHelper and change SendGrid API key (line 13). Then change the email address (line 15). <br >
+1. Go to POS_IMS/Models/EmailHelper and change SendGrid API key (line 13). Then change the email address (line 15). <br />
 2. Go to POS_IMS/Areas/Account/Login.cshtml and change Trilio init to your Trilio credentials. <br />
 3. Go to POS_IMS/Areas/Account/LoginWith2fa.cshtml and change init values your Trilio credentials. <br /><br />
 The system sends two 2FA messages. One when user logs in to send the token values, and the other on deletion of the token. <br /><br />
