@@ -47,7 +47,7 @@ System can have many Administrators. <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg" width="400" height="790">
 <br />
 
-Due to the St. Luke's project, Technical and User documentation for Authentication and Authorisation will be available after the 07/08/2024, when component has been fully rolled out. <br /><br />
+Due to the St. Luke's project, Technical and User documentation for Authentication and Authorisation will be available after the 31/08/2024, when component has been fully rolled out. <br /><br />
 IMS construction will begin after POS construction has been completed.
 
 
