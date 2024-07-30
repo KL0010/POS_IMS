@@ -35,7 +35,8 @@ Domain address can be changed by changing the applicationUrl in launchSettings.j
 System can have many Administrators. <br />
 
 <b>Trilio</b> is used to send emails and SMS. Email address validation and 2FA login must be changed. <br />
-1. Go to POS_IMS/Models/Init.cs and change the requried credentials for SendGrid, Trilio, and GoogleMapsApi. <b>Note: Google address API key cannot be hidden. Restrict access of key is required.</b><br />
+1. Go to POS_IMS/Models/Init.cs and change the requried credentials for SendGrid, Trilio, and GoogleMapsApi. <br />
+<b>Note: Google address API key cannot be hidden. Restrict access of key is required.</b><br />
 2. Got to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key
 3. Got to POS_IMS/Views/Home/InitialContact.cshtml and change the APIkey
 
