@@ -10,12 +10,9 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using POS.Models;
 using POS_IMS.Data;
 using POS_IMS.Models;
-using POS_IMS.Services;
 
 namespace POS_IMS.Areas.Identity.Pages.Account
 {
@@ -169,7 +166,10 @@ namespace POS_IMS.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await emailHelper.SendEmail(Input.Email, $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    string subject = "Confirm Email Account";
+                    string text = "<strong>Please confirm email account:</strong> ";
+
+                    await emailHelper.SendEmail(Input.Email, $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.", subject, text);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

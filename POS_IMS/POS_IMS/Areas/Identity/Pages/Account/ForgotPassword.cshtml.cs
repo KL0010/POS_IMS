@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using POS_IMS.Models;
 
 namespace POS_IMS.Areas.Identity.Pages.Account
 {
@@ -70,10 +71,11 @@ namespace POS_IMS.Areas.Identity.Pages.Account
                     values: new { area = "Identity", code },
                     protocol: Request.Scheme);
 
-                await _emailSender.SendEmailAsync(
-                    Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                string subject = "Reset password";
+                string text = "POS_IMS Message: ";
+
+                EmailHelper emailHelper = new EmailHelper();
+                await emailHelper.SendEmail(user.Email, $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.", subject, text);
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
