@@ -36,9 +36,8 @@ System can have many Administrators. <br />
 
 <b>Trilio</b> is used to send emails and SMS. Email address validation and 2FA login must be changed. <br />
 1. Go to POS_IMS/Models/Init.cs and change the requried credentials for SendGrid, Trilio, and GoogleMapsApi. <br />
-<b>Note: Google address API key cannot be hidden. Restrict access of key is required.</b><br />
-2. Got to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key
-3. Got to POS_IMS/Views/Home/InitialContact.cshtml and change the APIkey
+2. <b>Note: Google address API key cannot be hidden being a frontend feature. Restrict access of key is required.</b> Go to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key.
+3. Go to POS_IMS/Views/Home/InitialContact.cshtml and change the API key at URL calling Google address API.
 
 <b>Critical:</b> Input an email and mobile number you can access. Login cannot occur if email has not been validated through confirm link sent to email account, and then pass 2fa logic. Example is shown below. <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
