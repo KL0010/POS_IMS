@@ -162,7 +162,7 @@ namespace POS_IMS.Migrations
                     Postcode = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     BusinessId = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     LegalBusinessName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    PhoneNumer = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Brands = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     ContactDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Message = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false),

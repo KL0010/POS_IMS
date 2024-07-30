@@ -1,5 +1,4 @@
-﻿
-// Licensed to the .NET Foundation under one or more agreements.
+﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
@@ -146,16 +145,11 @@ namespace POS_IMS.Areas.Identity.Pages.Account
 
                     _context.UserTokens.Add(twoFa);
                     await _context.SaveChangesAsync();
-
-
-
-                    TwilioClient.Init("[Twilio SID Account]", "[Twilio token]"); // change the init values with your Trilio credentials
-
-                    var messageOptions = new CreateMessageOptions(
-                      new PhoneNumber("+" + user.PhoneNumber));
-                    messageOptions.From = new PhoneNumber("[Your Trilio phone number]"); // change the number to PhoneNumber with the your Trilio phone number
+                    Init init = new Init();
+                    TwilioClient.Init(init.TrilioAccount, init.TrilioKey);
+                    var messageOptions = new CreateMessageOptions(new PhoneNumber("+" + user.PhoneNumber));
+                    messageOptions.From = new PhoneNumber(init.TrilioNumber);
                     messageOptions.Body = "POS_IMS 2FA code: " + TwoFactorToken;
-
 
                     var message = MessageResource.Create(messageOptions);
                     Console.WriteLine(message.Body);

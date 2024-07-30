@@ -6,6 +6,7 @@ namespace POS.Models
     public class InitialContact
     {
         [Key]
+        [EmailAddress]
         [MaxLength(256)]
         public string Email { get; set; }
         [Required]
@@ -37,7 +38,7 @@ namespace POS.Models
         public string LegalBusinessName { get; set; }
         [Required]
         [MaxLength(100)]
-        public string PhoneNumer { get; set; }
+        public string PhoneNumber { get; set; }
         [Required]
         [MaxLength(200)]
         public string Brands { get; set; }

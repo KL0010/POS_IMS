@@ -10,9 +10,10 @@ namespace POS_IMS.Models
     {
         public async Task <bool>  SendEmail(string email, string callbackUrl, string subject, string text)
         {
-            var apiKey = "[Your SendGrid API key]";  // change apiKey to your SendGrid api key
+            Init init = new Init();
+            var apiKey = init.SendGridKey;
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("[email address]", "Example User"); // change email address linked to account
+            var from = new EmailAddress(init.Email, init.System); // change email address linked to account
             var to = new EmailAddress(email, subject);
             var htmlContent = "<strong>" + text + "</strong>: " + callbackUrl;
             var msg = MailHelper.CreateSingleEmail(from, to, subject, text, htmlContent);

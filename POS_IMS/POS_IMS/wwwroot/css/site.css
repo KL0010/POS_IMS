@@ -20,3 +20,21 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.center {
+    margin: auto;
+    width:80%
+}
+
+button{
+    margin-top: 10px
+}
+
+td {
+    padding: 5px
+}
+
+textarea{
+    margin-left: 5px;
+    margin-top: 5px
+}

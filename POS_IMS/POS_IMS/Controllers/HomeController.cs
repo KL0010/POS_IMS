@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using POS.Models;
 using POS_IMS.Data;
 using POS_IMS.Models;
@@ -8,12 +9,13 @@ using System.Diagnostics;
 
 namespace POS_IMS.Controllers
 {
-    [Authorize]
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
+
 
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
@@ -22,6 +24,7 @@ namespace POS_IMS.Controllers
             _userManager = userManager;
         }
 
+        [Authorize]
         public async Task<ActionResult> IndexAsync()
         {
             var usr = await _userManager.GetUserAsync(User);
@@ -33,6 +36,22 @@ namespace POS_IMS.Controllers
             }
 
             return BadRequest("An Error has occurred...");
+        }
+
+        public IActionResult InitialContact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult InitialContact(InitialContact contact)
+        {
+            if (! ModelState.IsValid)
+            {
+                return View();
+            }
+            return Redirect("index");
         }
 
         public IActionResult Privacy()

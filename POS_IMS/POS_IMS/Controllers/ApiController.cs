@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using POS_IMS.Models;
 
 namespace POS_IMS.Controllers
 {
@@ -28,6 +29,14 @@ namespace POS_IMS.Controllers
         public bool GetMobile(string phoneNumber)
         {
             return _userManager.Users.Any(x => x.PhoneNumber == phoneNumber);
+        }
+
+        [HttpPost]
+        public string GetAddressKey()
+        {
+            Init init = new Init();
+            string addresskey = init.AutoAddressKey;
+            return addresskey;
         }
     }
 }

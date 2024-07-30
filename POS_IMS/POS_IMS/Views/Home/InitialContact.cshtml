@@ -1,0 +1,154 @@
+﻿@model POS.Models.InitialContact
+
+@{
+    ViewData["Title"] = "IntitialContact";
+}
+
+<h1>wholesale and contract tea manufacturers</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-sm-7" style="overflow:hidden;">
+            <video autoplay muted id="myVideo">
+                <source src="~/mp4/index.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <h5>We supply wholesale tea and blends, in addition to providing custom blending and 
+               private labelling. We offer a variety of wholesale tea options, so you can choose the 
+               products and services that best meet your needs. Whether you’re looking for loose leaf or pre-packaged tea,
+               we have something for everyone.</h5>
+        </div>
+        <div class="col-md-5 col-sm-5">
+            <div class="input-group">
+                <form class="center" method="post" action="/Home/InitialContact">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Initial contact</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
+                                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group" id="col-md-5">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
+                                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "Address", id = "location-input", name = "busAddress" } })
+                                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.Borough, new { htmlAttributes = new { @class = "form-control", placeholder = "Borough", id = "locality-input", name = "borough" } })
+                                            @Html.ValidationMessageFor(model => model.Borough, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.Postcode, new { htmlAttributes = new { @class = "form-control", placeholder = "Postcode", id = "postal_code-input", name = "postcode" } })
+                                            @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control", placeholder = "State", id = "administrative_area_level_1-input", name = "state" } })
+                                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", placeholder = "Country", id = "country-input", name = "country" } })
+                                            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.BusinessId, new { htmlAttributes = new { @class = "form-control", placeholder = "Business Id" } })
+                                            @Html.ValidationMessageFor(model => model.BusinessId, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.LegalBusinessName, new { htmlAttributes = new { @class = "form-control", placeholder = "Legal Business Name" } })
+                                            @Html.ValidationMessageFor(model => model.LegalBusinessName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "Mobile Number" } })
+                                            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.Brands, new { htmlAttributes = new { @class = "form-control", placeholder = "Brands" } })
+                                            @Html.ValidationMessageFor(model => model.Brands, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        @Html.TextAreaFor(model => model.Message, new { rows = "10", cols = "42", placeholder= "Input Enquiries" })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+                    <button id="initialContactSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
+                </form>
+            </div>
+
+        </div>
+</div>
+    <script src="~/js/autoaddress.js" async></script>
+<script id="URL" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-xNU6_R7kVa255aIrH4yUzXFQF521vyI&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC" async defer></script>
+
+
