@@ -38,8 +38,7 @@ System can have many Administrators. <br />
 1. Go to POS_IMS/Models/Init.cs and change the requried credentials for SendGrid, Trilio, and GoogleMapsApi. <br />
 2. <b>Critical:</b> Google address API key cannot be hidden being a frontend feature. Make sure it is a public key, restrict access to map js and domain address only.</b> <br />
 Go to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key.
-3. Go to POS_IMS/Views/Home/InitialContact.cshtml and change the API key at URL calling Google address API.
-4. 
+3. Go to POS_IMS/Views/Home/InitialContact.cshtml and change the API key at URL calling Google address API. 
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
 <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/confirmEmail.jpg">
