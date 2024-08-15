@@ -20,8 +20,7 @@ namespace POS.Models
         [MaxLength(10)]
         public string FormatType { get; set; }
 
-        [Required]
-        [MaxLength(100)]    
+        [Required]   
         public string Description { get; set; }
 
         [Required]

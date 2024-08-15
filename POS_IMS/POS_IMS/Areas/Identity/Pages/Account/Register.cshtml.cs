@@ -130,16 +130,10 @@ namespace POS_IMS.Areas.Identity.Pages.Account
                 var users = await _userManager.GetUsersInRoleAsync("SuperAdmin");
                 string configuration = "";
 
-                if (users.Count == 0)
-                {
-                    configuration = "superAdmin";
-                    await _userManager.AddToRoleAsync(user, "SuperAdmin"); //Create Super Admin.
-                }
-                else
-                {
-                    configuration = "User";
-                    await _userManager.AddToRoleAsync(user, "User");
-                }
+
+                configuration = "User";
+                await _userManager.AddToRoleAsync(user, "User");
+
 
                 Home home = new Home
                 {

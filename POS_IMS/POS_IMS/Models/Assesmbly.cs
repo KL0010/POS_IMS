@@ -12,7 +12,6 @@ namespace POS.Models
         public string BlendName { get; set; }
 
         [Required]
-        [MaxLength(200)]
         public string Assemble { get; set; }
 
         [Required]

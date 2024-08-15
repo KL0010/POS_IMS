@@ -26,13 +26,18 @@ Initial creation of database by running command in Package Manager: Update-datab
 System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
 ![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
 <br />
+
 Then in root folder of POS_IMS, run in CMD:
 dotnet run.
-<br /> 
-Open web browser to URL https://192.168.1.103:7184.<br />
-Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json.<br />
+<br />
 <b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.<br />
 System can have many Administrators. <br />
+
+<b>Cretical: Super admin and AI is created with default password.</b><br />
+1. The email to these two accounts must be changed. Go to models/Config.cs and input the required gernuine emails.
+2. Open web browser to URL https://192.168.1.103:7184 and go to login and click forgot password link.<br />
+Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json.<br />
+
 
 <b>Trilio</b> is used to send emails and SMS. Email address validation and 2FA login must be changed. <br />
 1. Go to POS_IMS/Models/Init.cs and change the requried credentials for SendGrid, Trilio, and GoogleMapsApi. <br />

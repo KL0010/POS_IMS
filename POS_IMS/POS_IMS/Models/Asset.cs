@@ -8,7 +8,6 @@ namespace POS.Models
         public int AssetId { get; set; }
 
         [Required]
-        [MaxLength(30)]
         public string Description { get; set; }
 
         [Required]

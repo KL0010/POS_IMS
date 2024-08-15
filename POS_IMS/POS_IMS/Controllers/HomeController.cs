@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 namespace POS_IMS.Controllers
 {
-    
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -24,7 +24,6 @@ namespace POS_IMS.Controllers
             _userManager = userManager;
         }
 
-        [Authorize]
         public async Task<ActionResult> IndexAsync()
         {
             var usr = await _userManager.GetUserAsync(User);
@@ -38,21 +37,6 @@ namespace POS_IMS.Controllers
             return BadRequest("An Error has occurred...");
         }
 
-        public IActionResult InitialContact()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult InitialContact(InitialContact contact)
-        {
-            if (! ModelState.IsValid)
-            {
-                return View();
-            }
-            return Redirect("index");
-        }
 
         public IActionResult Privacy()
         {

@@ -5,7 +5,7 @@
 const CONFIGURATION = {
   "ctaTitle": "Checkout",
   "mapOptions": {"center":{"lat":37.4221,"lng":-122.0841},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":true,"zoom":11,"zoomControl":true,"maxZoom":22,"mapId":""},
-  "mapsApiKey": "AIzaSyD-xNU6_R7kVa255aIrH4yUzXFQF521vyI",
+    "mapsApiKey": "AIzaSyA6SO42qYQJDh0N0BhUJPswfO040rUPQ6MAIzaSyA6SO42qYQJDh0N0BhUJPswfO040rUPQ6M",
   "capabilities": {"addressAutocompleteControl":true,"mapDisplayControl":true,"ctaControl":true}
 };
 

@@ -12,7 +12,6 @@ namespace POS.Models
         public string CategoryName { get; set; }
 
         [Required]
-        [MaxLength(200)]
         public string CategoryDescription { get; set; }
 
         public IEnumerable <Blend> Blends { get; set; }

@@ -59,7 +59,7 @@ namespace POS_IMS.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BlendName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Assemble = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Assemble = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -73,7 +73,7 @@ namespace POS_IMS.Migrations
                 {
                     AssetId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Description = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Format = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
                 },
@@ -101,7 +101,7 @@ namespace POS_IMS.Migrations
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    CategoryDescription = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
+                    CategoryDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -901,7 +901,7 @@ namespace POS_IMS.Migrations
                     LogoUrl = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     FormatType = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     ContractId = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -1092,7 +1092,7 @@ namespace POS_IMS.Migrations
                     AssetName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     AssetUrl = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     FormatType = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BrandId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -1111,11 +1111,30 @@ namespace POS_IMS.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "493f974f-d400-46d7-ad39-d1526c11ae02", null, "Customer", "CUSTOMER" },
-                    { "59aff194-dcce-4030-be1f-7d1f72d23367", null, "User", "USER" },
-                    { "91fe2c50-212f-41f7-87b4-58d9f3ceb39a", null, "SuperAdmin", "SUPERADMIN" },
-                    { "a1891b7b-3f02-4fa1-a504-0c7d51dc71f9", null, "Sales", "SALES" },
-                    { "d18c37bb-c087-450d-8978-419e89909ef1", null, "Admin", "ADMIN" }
+                    { "0450ef18-1bbd-48c2-8704-829aa5a933f9", null, "Customer", "CUSTOMER" },
+                    { "30f9a86f-1d49-48ec-845d-f33df7e494ca", null, "Sales", "SALES" },
+                    { "add72c48-dae4-4856-a1d7-0f5c0e25709d", null, "ai", "AI" },
+                    { "e7766024-ce15-42c0-b6ce-7543f5593464", null, "User", "USER" },
+                    { "eb9ec275-02a9-457f-91bd-b1533156d729", null, "Admin", "ADMIN" },
+                    { "fd3f8c04-1fad-4165-a96e-98b5226f578c", null, "SuperAdmin", "SUPERADMIN" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[,]
+                {
+                    { "4f41c7ac-15c4-4bf2-afb3-c68d43e67925", 0, "50a7c88c-a741-4371-9da3-268cc63064d3", "superAdmin@gmail.com", true, false, null, "SUPERADMIN@GMAIL.COM", "SUPERADMIN", "AQAAAAIAAYagAAAAENBRLzA5Njq00Kk0jn/wllGAlSJ28GJUrMWlkmPDRinj+Cq7aYu4lHk0mjxKpqJY6Q==", null, false, "ca476009-ffb7-4591-96cb-f19518288f09", false, "SuperAdmin" },
+                    { "9e2528b9-6f63-41fb-91a7-3a919fd60a14", 0, "407f4ce4-f024-4430-9247-7a82cddf06e5", "NotApplicable@gmail.com", true, false, null, "NOTAPPLICABLE@GMAIL.COM", "SYSTEMAL", "AQAAAAIAAYagAAAAEPcBhYWLNEQnyzAyxpevT/cvR2CVd1eWpXo7eLWRQMdOL6n8jNLnm62H24jSx6EQBg==", null, false, "5f3e9a6e-e404-4efc-b609-b524c58cb98c", false, "SystemAI" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[,]
+                {
+                    { "fd3f8c04-1fad-4165-a96e-98b5226f578c", "4f41c7ac-15c4-4bf2-afb3-c68d43e67925" },
+                    { "add72c48-dae4-4856-a1d7-0f5c0e25709d", "9e2528b9-6f63-41fb-91a7-3a919fd60a14" }
                 });
 
             migrationBuilder.CreateIndex(

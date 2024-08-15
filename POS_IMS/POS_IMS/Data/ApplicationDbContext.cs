@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using POS.Models;
+using POS_IMS.Models;
+using System;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -62,8 +64,16 @@ namespace POS_IMS.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            Config config = new Config();
+
             modelBuilder.Entity<IdentityRole>().Property(u => u.ConcurrencyStamp).IsConcurrencyToken();
             modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole
+                {
+                    Id = config.AiRoleId,
+                    Name = "ai",
+                    NormalizedName = "AI",
+                },
                 new IdentityRole
                 {
                     Id = Guid.NewGuid().ToString(),
@@ -84,7 +94,7 @@ namespace POS_IMS.Data
                 },
                 new IdentityRole
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = config.SuperAdminRoleId,
                     Name = "SuperAdmin",
                     NormalizedName = "SUPERADMIN",
                 },
@@ -94,7 +104,48 @@ namespace POS_IMS.Data
                     Name = "Admin",
                     NormalizedName = "ADMIN",
                 });
-                base.OnModelCreating(modelBuilder);
+
+            //Create super admin and system AI.
+            var superAdmin = new IdentityUser
+            {
+                Id = config.SuperAdminIdentityId,
+                UserName = "SuperAdmin",
+                NormalizedUserName = "SUPERADMIN",
+                Email = config.superAdminEmail,
+                NormalizedEmail = config.superAdminEmail.ToUpper(),
+                EmailConfirmed = true
+            };
+            var systemAi = new IdentityUser
+            {
+                Id = config.AiIdentityId,
+                UserName = "SystemAI",
+                NormalizedUserName = "SYSTEMAL",
+                Email = config.AiEmail,
+                NormalizedEmail = config.AiEmail.ToUpper(),
+                EmailConfirmed = true
+            };
+            var hasher = new PasswordHasher<IdentityUser>();
+            var password1 = hasher.HashPassword(superAdmin, "defaultPassword1"); // default password
+            var password2 = hasher.HashPassword(systemAi, "defaultPassword2"); //default password
+            superAdmin.PasswordHash = password1;
+            systemAi.PasswordHash = password2;
+
+            modelBuilder.Entity<IdentityUser>().HasData(superAdmin,systemAi);
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(
+            new IdentityUserRole<string>
+            {
+                RoleId = config.AiRoleId,
+                UserId = config.AiIdentityId
+            },
+            new IdentityUserRole<string>
+            {
+                RoleId = config.SuperAdminRoleId,
+                UserId = config.SuperAdminIdentityId
+            }) ;
+
+
+            base.OnModelCreating(modelBuilder);
 
         }
     }

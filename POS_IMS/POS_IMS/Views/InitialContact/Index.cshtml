@@ -1,8 +1,9 @@
 ﻿@model POS.Models.InitialContact
 
 @{
-    ViewData["Title"] = "IntitialContact";
+    ViewData["Title"] = "Index";
 }
+
 
 <h1>wholesale and contract tea manufacturers</h1>
 
@@ -13,10 +14,12 @@
                 <source src="~/mp4/index.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <h5>We supply wholesale tea and blends, in addition to providing custom blending and 
-               private labelling. We offer a variety of wholesale tea options, so you can choose the 
-               products and services that best meet your needs. Whether you’re looking for loose leaf or pre-packaged tea,
-               we have something for everyone.</h5>
+            <h5>
+                We supply wholesale tea and blends, in addition to providing custom blending and
+                private labelling. We offer a variety of wholesale tea options, so you can choose the
+                products and services that best meet your needs. Whether you’re looking for loose leaf or pre-packaged tea,
+                we have something for everyone.
+            </h5>
         </div>
         <div class="col-md-5 col-sm-5">
             <div class="input-group">
@@ -139,7 +142,7 @@
                                 </td>
                             </tr>
                         </table>
-                        @Html.TextAreaFor(model => model.Message, new { rows = "10", cols = "42", placeholder= "Input Enquiries" })
+                        @Html.TextAreaFor(model => model.Message, new { rows = "10", cols = "42", placeholder = "Input Enquiries" })
                         @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                     </div>
                     <button id="initialContactSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
@@ -147,8 +150,6 @@
             </div>
 
         </div>
-</div>
+    </div>
     <script src="~/js/autoaddress.js" async></script>
-<script id="URL" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-xNU6_R7kVa255aIrH4yUzXFQF521vyI&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC" async defer></script>
-
-
+    <script id="URL" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-xNU6_R7kVa255aIrH4yUzXFQF521vyI&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC" async defer></script>

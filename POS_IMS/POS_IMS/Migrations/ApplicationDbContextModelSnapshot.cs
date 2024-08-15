@@ -51,31 +51,37 @@ namespace POS_IMS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "59aff194-dcce-4030-be1f-7d1f72d23367",
+                            Id = "add72c48-dae4-4856-a1d7-0f5c0e25709d",
+                            Name = "ai",
+                            NormalizedName = "AI"
+                        },
+                        new
+                        {
+                            Id = "e7766024-ce15-42c0-b6ce-7543f5593464",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "a1891b7b-3f02-4fa1-a504-0c7d51dc71f9",
+                            Id = "30f9a86f-1d49-48ec-845d-f33df7e494ca",
                             Name = "Sales",
                             NormalizedName = "SALES"
                         },
                         new
                         {
-                            Id = "493f974f-d400-46d7-ad39-d1526c11ae02",
+                            Id = "0450ef18-1bbd-48c2-8704-829aa5a933f9",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
-                            Id = "91fe2c50-212f-41f7-87b4-58d9f3ceb39a",
+                            Id = "fd3f8c04-1fad-4165-a96e-98b5226f578c",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = "d18c37bb-c087-450d-8978-419e89909ef1",
+                            Id = "eb9ec275-02a9-457f-91bd-b1533156d729",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -169,6 +175,40 @@ namespace POS_IMS.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "4f41c7ac-15c4-4bf2-afb3-c68d43e67925",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "50a7c88c-a741-4371-9da3-268cc63064d3",
+                            Email = "superAdmin@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "SUPERADMIN@GMAIL.COM",
+                            NormalizedUserName = "SUPERADMIN",
+                            PasswordHash = "AQAAAAIAAYagAAAAENBRLzA5Njq00Kk0jn/wllGAlSJ28GJUrMWlkmPDRinj+Cq7aYu4lHk0mjxKpqJY6Q==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "ca476009-ffb7-4591-96cb-f19518288f09",
+                            TwoFactorEnabled = false,
+                            UserName = "SuperAdmin"
+                        },
+                        new
+                        {
+                            Id = "9e2528b9-6f63-41fb-91a7-3a919fd60a14",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "407f4ce4-f024-4430-9247-7a82cddf06e5",
+                            Email = "NotApplicable@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "NOTAPPLICABLE@GMAIL.COM",
+                            NormalizedUserName = "SYSTEMAL",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPcBhYWLNEQnyzAyxpevT/cvR2CVd1eWpXo7eLWRQMdOL6n8jNLnm62H24jSx6EQBg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "5f3e9a6e-e404-4efc-b609-b524c58cb98c",
+                            TwoFactorEnabled = false,
+                            UserName = "SystemAI"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -233,6 +273,18 @@ namespace POS_IMS.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "9e2528b9-6f63-41fb-91a7-3a919fd60a14",
+                            RoleId = "add72c48-dae4-4856-a1d7-0f5c0e25709d"
+                        },
+                        new
+                        {
+                            UserId = "4f41c7ac-15c4-4bf2-afb3-c68d43e67925",
+                            RoleId = "fd3f8c04-1fad-4165-a96e-98b5226f578c"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -309,8 +361,7 @@ namespace POS_IMS.Migrations
 
                     b.Property<string>("Assemble")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BlendName")
                         .IsRequired()
@@ -335,8 +386,7 @@ namespace POS_IMS.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Format")
                         .IsRequired()
@@ -427,8 +477,7 @@ namespace POS_IMS.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FormatType")
                         .IsRequired()
@@ -470,8 +519,7 @@ namespace POS_IMS.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FormatType")
                         .IsRequired()
@@ -511,8 +559,7 @@ namespace POS_IMS.Migrations
 
                     b.Property<string>("CategoryDescription")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CategoryName")
                         .IsRequired()

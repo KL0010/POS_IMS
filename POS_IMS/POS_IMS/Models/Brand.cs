@@ -29,7 +29,6 @@ namespace POS.Models
         public Contract Contract { get; set; }
 
         [Required]
-        [MaxLength(100)]
         public string Description{ get; set; }
     }
 }
