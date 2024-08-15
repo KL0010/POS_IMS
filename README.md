@@ -22,7 +22,7 @@ Tron network is used for smart contracts and validation of assets ownership.
 <br />
 <h3>To-Do:</h3>
 Delete folder Migrations.<br />
-Create database by running command in Package Manager: <br />
+Create database by running commands in Package Manager: <br />
 1. ADD-MIGRATION InitialDbCreation <br />
 2. Update-database InitialDbCreation <br />
 System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
