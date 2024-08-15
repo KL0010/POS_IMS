@@ -33,9 +33,11 @@ dotnet run.
 <b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.<br />
 System can have many Administrators. <br />
 
-<b>Cretical: Super admin and AI is created with default password.</b><br />
+<b>Critical: Super admin and AI is created with default password.</b><br />
 1. The email to these two accounts must be changed. Go to models/Config.cs and input the required gernuine emails.
-2. Open web browser to URL https://192.168.1.103:7184 and go to login and click forgot password link.<br />
+2. Open web browser to URL https://192.168.1.103:7184 and go to login and click forgot password link and change the default passwords for both account. <br />
+Credentials for super admin: username = SuperAdmin, Password = "defaultPassword1". <br />
+Credentials for AI: username = SystemAI, Password = "defaultPassword2". <br />
 Domain address can be changed by changing the applicationUrl in launchSettings.json, found in POS_IMS/Properties/launchSettings.json.<br />
 
 
