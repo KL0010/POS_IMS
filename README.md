@@ -26,7 +26,8 @@ Create database by running commands in Package Manager: <br />
 1. ADD-MIGRATION InitialDbCreation <br />
 2. Update-database InitialDbCreation <br />
 System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
-![alt ](https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg)
+<img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg">
+<br />
 <br />
 
 Then in root folder of POS_IMS, run in CMD:
