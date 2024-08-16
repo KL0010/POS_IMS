@@ -33,7 +33,7 @@ System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication 
 Then in root folder of POS_IMS, run in CMD:
 dotnet run.
 <br />
-<b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, created when Update-database command is executed.<br />
+<b>One and only one Super Administrator is created, this occurs when Update-database command is executed.<br />
 System can have many Administrators. <br />
 
 <b>Critical: Super admin and AI is created with default password.</b><br />
