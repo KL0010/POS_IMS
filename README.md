@@ -32,7 +32,7 @@ System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication 
 Then in root folder of POS_IMS, run in CMD:
 dotnet run.
 <br />
-<b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, which is triggered when first user is created.<br />
+<b>One and only one Super Administrator is created on first entry to AspNetUserRoles table</b>, created when Update-database command is executed.<br />
 System can have many Administrators. <br />
 
 <b>Critical: Super admin and AI is created with default password.</b><br />
@@ -55,7 +55,7 @@ Go to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key.
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg" width="400" height="790">
 <br />
 
-Technical and User documentation for Authentication and Authorisation will be available after the 31/08/2024, when component has been fully rolled out. <br /><br />
+Technical and User documentation for Authentication and Authorisation will be available after the 31/09/2024, when component has been fully rolled out. <br /><br />
 IMS construction will begin after POS construction has been completed.
 
 
