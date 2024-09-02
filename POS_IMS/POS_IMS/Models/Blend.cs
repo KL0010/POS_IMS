@@ -22,6 +22,10 @@ namespace POS.Models
         [Required]
         public int CategoryId { get; set; }
 
+        [Required]
+        [MaxLength(150)]
+        public string ImageUrl { get; set; }
+
         [ForeignKey(nameof(CategoryId))]
 
         public Category Category { get; set; }

@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using POS_IMS.Data;
-using POS_IMS.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

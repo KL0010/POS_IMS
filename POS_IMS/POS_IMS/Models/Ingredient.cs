@@ -35,5 +35,9 @@ namespace POS.Models
 
         [Required]
         public Byte Barcode { get; set; }
+
+        [Required]
+        [MaxLength(150)]
+        public string ImageUrl { get; set; }
     }
 }

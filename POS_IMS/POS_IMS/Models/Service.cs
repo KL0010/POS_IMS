@@ -12,7 +12,6 @@ namespace POS.Models
         public string Title { get; set; }
 
         [Required]
-        [MaxLength(20)]
         public string ServiceDescription { get; set; }
 
         [Required]

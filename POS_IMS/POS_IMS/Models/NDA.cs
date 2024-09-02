@@ -9,7 +9,6 @@ namespace POS.Models
         public string NdaId { get; set; }
 
         [Required]
-        [MaxLength(2000)]
         public string Agreement { get; set; }
 
         [Required]

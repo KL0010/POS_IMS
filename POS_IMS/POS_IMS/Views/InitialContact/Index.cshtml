@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-5 col-sm-5">
             <div class="input-group">
-                <form class="center" method="post" action="/Home/InitialContact">
+                <form class="center" method="post" action="/InitialContact/Index">
                     @Html.AntiForgeryToken()
                     <div class="form-horizontal">
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -100,7 +100,7 @@
                                     <div class="form-group">
                                         <div class="col-md-12">
                                             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
-                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger", @id="emailDanger"})
                                         </div>
                                     </div>
                                 </td>
@@ -150,6 +150,17 @@
             </div>
 
         </div>
+        @if (ViewBag.Email != null)
+        {
+            ViewBag.Email = null;
+            <script>
+                document.getElementById("emailDanger").innerHTML = "Email already exist. Please enter another";
+            </script>
+        }
+        <script src="~/js/autoaddress.js" async></script>
+        <script id="URL" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCknHv2dPV2zGAsO3hkZcmfD3HZwSf5MU8&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC" async defer></script>
+
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
     </div>
-    <script src="~/js/autoaddress.js" async></script>
-    <script id="URL" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-xNU6_R7kVa255aIrH4yUzXFQF521vyI&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC" async defer></script>

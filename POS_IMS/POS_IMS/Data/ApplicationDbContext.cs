@@ -11,11 +11,11 @@ namespace POS_IMS.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
+
         public virtual DbSet<InitialContact> IntialContacts { get; set; }
         public virtual DbSet<Validation> Validations { get; set; }
         public virtual DbSet<ApiKey> Apikeys { get; set; }
@@ -111,15 +111,15 @@ namespace POS_IMS.Data
                 Id = config.SuperAdminIdentityId,
                 UserName = "SuperAdmin",
                 NormalizedUserName = "SUPERADMIN",
-                Email = config.superAdminEmail,
-                NormalizedEmail = config.superAdminEmail.ToUpper(),
+                Email = config.SuperAdminEmail,
+                NormalizedEmail = config.SuperAdminEmail.ToUpper(),
                 EmailConfirmed = true
             };
             var systemAi = new IdentityUser
             {
                 Id = config.AiIdentityId,
                 UserName = "SystemAI",
-                NormalizedUserName = "SYSTEMAL",
+                NormalizedUserName = "SYSTEMAI",
                 Email = config.AiEmail,
                 NormalizedEmail = config.AiEmail.ToUpper(),
                 EmailConfirmed = true

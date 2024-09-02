@@ -6,7 +6,7 @@
         public string AiRoleId { get;} = Guid.NewGuid().ToString();
         public string SuperAdminIdentityId {get;} = Guid.NewGuid().ToString();
         public string AiIdentityId { get;} = Guid.NewGuid().ToString();
-        public string superAdminEmail { get; } = "Email of super admin";
-        public string AiEmail { get; } = "Email for AI";
+        public string SuperAdminEmail { get;} = "kmlam1375@gmail.com";
+        public string AiEmail { get; } = "lamkam1375@gmail.com";
     }
 }

@@ -21,10 +21,9 @@ Tron network is used for smart contracts and validation of assets ownership.
 <br />
 <br />
 <h3>To-Do:</h3>
-Delete folder Migrations.<br />
-Create database by running commands in Package Manager: <br />
-1. ADD-MIGRATION InitialDbCreation <br />
-2. Update-database InitialDbCreation <br />
+1. Install Python into OS environment. Copy and paste virus_scan.py in Python folder into Python Lib root folder <br />
+2. Create database by running commands in Package Manager: ADD-MIGRATION InitialDbCreation <br />
+3. Update-database InitialDbCreation <br />
 System uses <b>IdentityDbContext</b>, a trusted, battle hardened Authentication and Authorisation component. 
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/POS_IMS.jpg">
 <br />
@@ -48,7 +47,8 @@ Domain address can be changed by changing the applicationUrl in launchSettings.j
 1. Go to POS_IMS/Models/Init.cs and change the requried credentials for SendGrid, Trilio, and GoogleMapsApi. <br />
 2. <b>Critical:</b> Google address API key cannot be hidden being a frontend feature. Make sure it is a public key, restrict access to map js and domain address only.</b> <br />
 Go to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key.
-3. Go to POS_IMS/Views/Home/InitialContact.cshtml and change the API key at URL calling Google address API. 
+3. Go to POS_IMS/Views/Home/InitialContact.cshtml and change the API key at URL calling Google address API.
+4. System uses CloudMersive to scan files for malware. Api key needed. 
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/register.jpg">
 <br />
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/confirmEmail.jpg">

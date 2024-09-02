@@ -9,5 +9,6 @@
         public string SendGridKey { get; } = "[Sendgrid API key]"; // [Sendgrid API key]
         public string Email { get; } = "[Email]"; // [Email]
         public string System { get; } = "[System Name]"; // [System Name]
+        public string ScanApi { get; } = "[Cloudmersive API key]";// [Cloudmersive API key]
     }
 }

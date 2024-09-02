@@ -1,11 +1,21 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using POS.Models;
+using POS_IMS.Data;
+using POS_IMS.Models;
+using System.Configuration;
+using System.Web;
+using Twilio.Types;
 
 namespace POS_IMS.Controllers
 {
-    public class InitialContactController : Controller
+    public class InitialContactController(ApplicationDbContext context) : Controller
     {
-        // GET: InitialContactController
+        private ApplicationDbContext context = context;
+
         public ActionResult Index()
         {
             return View();
@@ -26,19 +36,28 @@ namespace POS_IMS.Controllers
         // POST: InitialContactController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Index(InitialContact initialContact)
         {
-            try
+            Sanitizer sanitizer = new Sanitizer();
+            
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                initialContact = sanitizer.SanitizeContact(initialContact);
+                if(context.IntialContacts.Any(x => x.Email == initialContact.Email))
+                {
+                    ViewBag.Email = "Email provided already exist.";
+                    return View();
+                }
+                context.IntialContacts.Add(initialContact);
+                context.SaveChanges();
             }
-            catch
-            {
-                return View();
-            }
+
+            return Redirect("/Identity/Account/Register?=" + initialContact.Email);
+
         }
 
         // GET: InitialContactController/Edit/5
+        [Authorize(Roles = "SuperAdmin")]
         public ActionResult Edit(int id)
         {
             return View();
@@ -47,6 +66,7 @@ namespace POS_IMS.Controllers
         // POST: InitialContactController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public ActionResult Edit(int id, IFormCollection collection)
         {
             try
@@ -60,6 +80,7 @@ namespace POS_IMS.Controllers
         }
 
         // GET: InitialContactController/Delete/5
+        [Authorize(Roles = "SuperAdmin")]
         public ActionResult Delete(int id)
         {
             return View();
@@ -68,6 +89,7 @@ namespace POS_IMS.Controllers
         // POST: InitialContactController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public ActionResult Delete(int id, IFormCollection collection)
         {
             try
