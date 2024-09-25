@@ -56,7 +56,7 @@ Go to POS_IMS/wwwroot/js/autoaddress.js and change the Google Api key.
 <img src="https://github.com/kiet1375/POS_IMS/blob/main/POS_IMS/POS_IMS/imgs/sms.jpg" width="400" height="790">
 <br />
 
-Technical and User documentation for Authentication and Authorisation will be available after the 31/09/2024, when component has been fully rolled out. <br /><br />
+Technical and User documentation for Authentication and Authorisation will be available when component has been fully rolled out. <br /><br />
 IMS construction will begin after POS construction has been completed.
 
 
